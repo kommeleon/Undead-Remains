@@ -248,7 +248,7 @@ this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
                 .add(Attributes.ARMOR_TOUGHNESS, 1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 2f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 2f)
-                .add(Attributes.ATTACK_DAMAGE, 2f);
+                .add(Attributes.ATTACK_DAMAGE, 10f);
     }
 
 public void stopSeenByPlayer(ServerPlayer pPlayer) {    //Add the given player to the list of players tracking 
