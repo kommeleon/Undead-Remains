@@ -124,8 +124,8 @@ public static final RegistryObject<Item> RABBIT_FOOT_MODIFIED_FOSSIL_AXE = ITEMS
 public static final RegistryObject<Item> NAUTILUS_SHELL_MODIFIED_FOSSIL_SHOVEL = ITEMS.register("nautilus_shell_modified_fossil_shovel",
         () -> new ShovelItem(ModToolTiers.NAUTILUS_SHELL_MODIFIED_FOSSIL, 4 -1, 1 -4, new Item.Properties()));
 public static final RegistryObject<Item> SLIME_BALL_MODIFIED_FOSSIL_HOE = ITEMS.register("slime_ball_modified_fossil_hoe",
-        () -> new HoeItem(ModToolTiers.SLIME_BALL_MODIFIED_FOSSIL, 1 -1, 2.5f -4, new Item.Properties()));
-//Armor
+        () -> new FossilHoeItem(ModToolTiers.SLIME_BALL_MODIFIED_FOSSIL, new Item.Properties()));
+//ArmorFossilHoeItem
 //Fossil
 public static final RegistryObject<Item> FOSSIL_HELMET = ITEMS.register("fossil_helmet",
         () -> new ModSimpleArmorItem(ModArmorMaterials.FOSSIL, ArmorItem.Type.HELMET, new Item.Properties()));
