@@ -8,7 +8,9 @@
 package net.diverginglensestudios.undeadremains.effects;
 
 import net.diverginglensestudios.undeadremains.UndeadRemains;
-import net.diverginglensestudios.undeadremains.effects.custom.*;
+import net.diverginglensestudios.undeadremains.effects.custom.FossilVisionEffect;
+import net.diverginglensestudios.undeadremains.effects.custom.FossilizedHeartEffect;
+import net.diverginglensestudios.undeadremains.effects.custom.TestFreezeEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +27,9 @@ public class ModEffects {
 
     public static final RegistryObject<MobEffect> FOSSILIZED_HEART = MOB_EFFECTS.register("fossilized_heart",
             () -> new FossilizedHeartEffect(MobEffectCategory.HARMFUL, 3124687));
+
+    public static final RegistryObject<MobEffect> FOSSIL_VISION = MOB_EFFECTS.register("fossil_vision",
+            () -> new FossilVisionEffect(MobEffectCategory.BENEFICIAL, 3124687));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

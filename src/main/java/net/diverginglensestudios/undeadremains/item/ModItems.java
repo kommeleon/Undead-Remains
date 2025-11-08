@@ -64,7 +64,7 @@ public static final RegistryObject<Item> THE_QUARTZ_MODIFIED_FOSSILS_EYE = ITEMS
 public static final RegistryObject<Item> FOSSILIZED_DRUMSTICK = ITEMS.register("fossilized_drumstick",
         () -> new ModFoodItem(new Item.Properties().food(ModFoods.FOSSILIZED_DRUMSTICK),200));
 public static final RegistryObject<Item> GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK = ITEMS.register("gold_block_modified_fossilized_drumstick",
-        () -> new ModFoodItem(new Item.Properties().food(ModFoods.FOSSILIZED_DRUMSTICK),200));
+        () -> new ModFoodItem(new Item.Properties().food(ModFoods.GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK),200));
 
 //Fuel Items
 public static final RegistryObject<Item> METATURBONITE = ITEMS.register("metaturbonite",
