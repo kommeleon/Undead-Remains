@@ -18,13 +18,13 @@
 - If needed create a new loot table from ground up.
 
 ### In _ModBlockStateProvider_:
--Von ähnlichem Block kopieren
+-Copy from similar block
 
-## Recomended additions:
+## Recommended additions:
 Add item tags in _ModBlockTagGenerator_
 
 #### In ModItemTagGenerator:
 - Add the tags here too.
-- Don't foget following, because blocks are not items.: .add(ModBlocks.MYBLOCK.get().asItem())
+- Don't forget following, because blocks are not items.: .add(ModBlocks.MYBLOCK.get().asItem())
 
-Add recepies in _ModRecipeProvider_
+Add recipes in _ModRecipeProvider_
