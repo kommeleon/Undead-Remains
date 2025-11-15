@@ -20,39 +20,54 @@ import net.minecraft.world.level.Level;
 import java.util.Map;
 
 public class ModSimpleArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-            //.put(ModArmorMaterials.FOSSIL, new MobEffectInstance(MobEffects.NIGHT_VISION, 230, 1,
-            //false,false, true))
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP = (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
+            // .put(ModArmorMaterials.FOSSIL, new MobEffectInstance(MobEffects.NIGHT_VISION,
+            // 230, 1,
+            // false,false, true))
             .put(ModArmorMaterials.RARE_FOSSIL, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 1,
-            false,false, true))
+                    false, false, true))
             .put(ModArmorMaterials.METATORBERNITE, new MobEffectInstance(MobEffects.CONFUSION, 200, 1,
-            false,false, true))
-            .put(ModArmorMaterials.SCUTE_MODIFIED_FOSSIL, new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 10, 1,
-            false,false, false)).build();
-            
-
-            
+                    false, false, true))
+            .put(ModArmorMaterials.SCUTE_MODIFIED_FOSSIL, new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1, 1,
+                    false, false, false))
+            .put(ModArmorMaterials.CLOCK_MODIFIED_FOSSIL, new MobEffectInstance(MobEffects.GLOWING, 10, 1,
+                    false, false, false))
+            .build();
 
     public ModSimpleArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
-@Override
+    @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        if (!world.isClientSide()){
+        if (!world.isClientSide()) {
 
-        // Check the leggings slot (index 1) and apply the SCUTE_MODIFIED_FOSSIL effect directly
-        ItemStack leggingsStack = player.getInventory().getArmor(1);
-        if (!leggingsStack.isEmpty() && leggingsStack == stack && leggingsStack.getItem() instanceof ArmorItem) {
-            ArmorItem leggingsItem = (ArmorItem) leggingsStack.getItem();
-            if (leggingsItem.getMaterial() == ModArmorMaterials.SCUTE_MODIFIED_FOSSIL) {
-                MobEffectInstance effect = MATERIAL_TO_EFFECT_MAP.get(ModArmorMaterials.SCUTE_MODIFIED_FOSSIL);
-                if (effect != null) {
-                    player.addEffect(new MobEffectInstance(effect));
+            // Check the leggings slot (index 1) and apply the SCUTE_MODIFIED_FOSSIL effect
+            // directly
+            ItemStack leggingsStack = player.getInventory().getArmor(1);
+            if (!leggingsStack.isEmpty() && leggingsStack == stack && leggingsStack.getItem() instanceof ArmorItem) {
+                ArmorItem leggingsItem = (ArmorItem) leggingsStack.getItem();
+                if (leggingsItem.getMaterial() == ModArmorMaterials.SCUTE_MODIFIED_FOSSIL) {
+                    MobEffectInstance effect = MATERIAL_TO_EFFECT_MAP.get(ModArmorMaterials.SCUTE_MODIFIED_FOSSIL);
+                    if (effect != null) {
+                        player.addEffect(new MobEffectInstance(effect));
+                    }
                 }
             }
-        }
+            ItemStack chestplateStack = player.getInventory().getArmor(2);
+            if (!chestplateStack.isEmpty()
+                    && chestplateStack == stack
+                    && chestplateStack.getItem() instanceof ArmorItem chestplateItem) {
+                if (chestplateItem.getMaterial() == ModArmorMaterials.CLOCK_MODIFIED_FOSSIL) {
+                    boolean isDay = player.level().isDay();
+                    boolean isNight = !isDay;
+                    if (isDay) {
+                        player.addEffect(new MobEffectInstance(MobEffects.GLOWING, 2, 0, false, false, false));
+                    } else if (isNight) {
+                        player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 2, 0, false, false, false));
+                    }
+                }
+            }
         }
 
         // Preserve existing full-set checks and effects
@@ -66,17 +81,17 @@ public class ModSimpleArmorItem extends ArmorItem {
             ArmorMaterial mapArmorMaterial = entry.getKey();
             MobEffectInstance mapStatusEffect = entry.getValue();
 
-            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }
 
     private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
-                                            MobEffectInstance mapStatusEffect) {
+            MobEffectInstance mapStatusEffect) {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
 
-        if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+        if (hasCorrectArmorOn(mapArmorMaterial, player)) {
             player.addEffect(new MobEffectInstance(mapStatusEffect));
         }
     }
@@ -93,18 +108,16 @@ public class ModSimpleArmorItem extends ArmorItem {
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
 
-
-
         for (ItemStack armorStack : player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
+            if (!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;
             }
         }
 
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
+        ArmorItem boots = ((ArmorItem) player.getInventory().getArmor(0).getItem());
+        ArmorItem leggings = ((ArmorItem) player.getInventory().getArmor(1).getItem());
+        ArmorItem breastplate = ((ArmorItem) player.getInventory().getArmor(2).getItem());
+        ArmorItem helmet = ((ArmorItem) player.getInventory().getArmor(3).getItem());
 
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;

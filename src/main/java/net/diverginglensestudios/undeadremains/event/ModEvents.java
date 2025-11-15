@@ -16,15 +16,19 @@ import net.diverginglensestudios.undeadremains.entity.custom.Zombies.SmallWoodli
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.StrayZombieEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.TreeZombieEntity;
 import net.diverginglensestudios.undeadremains.item.ModItems;
-
+import net.minecraft.core.BlockPos;
 // Import Minecraft and Forge Elements
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -34,8 +38,10 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
@@ -61,8 +67,10 @@ public class ModEvents {
                 serverLevel.addFreshEntity(bigWoodling);
 
                 // Spawn Small Woodling
-                SmallWoodlingEntity smallWoodling = new SmallWoodlingEntity(ModEntities.SMALL_WOODLING.get(), serverLevel);
-                smallWoodling.moveTo(treeZombie.getX() + 0.5, treeZombie.getY(), treeZombie.getZ() + 0.5, treeZombie.getYRot(), 0);
+                SmallWoodlingEntity smallWoodling = new SmallWoodlingEntity(ModEntities.SMALL_WOODLING.get(),
+                        serverLevel);
+                smallWoodling.moveTo(treeZombie.getX() + 0.5, treeZombie.getY(), treeZombie.getZ() + 0.5,
+                        treeZombie.getYRot(), 0);
                 serverLevel.addFreshEntity(smallWoodling);
             }
         }
@@ -80,10 +88,44 @@ public class ModEvents {
         }
     }
 
-    
+    @SubscribeEvent
+    public static void onTridentImpact(ProjectileImpactEvent event) {
+
+        if (!(event.getProjectile() instanceof ThrownTrident trident))
+            return;
+        if (!trident.isChanneling())
+            return; // Only channeling tridents
+
+        Entity owner = trident.getOwner();
+        if (!(owner instanceof ServerPlayer living))
+            return;
+
+        // Check helmet
+        ItemStack helmet = living.getItemBySlot(EquipmentSlot.HEAD);
+        if (helmet.getItem() != ModItems.LIGHTNING_ROD_MODIFIED_FOSSIL_HELMET.get())
+            return;
+
+        HitResult hit = event.getRayTraceResult();
+        if (hit.getType() != HitResult.Type.BLOCK)
+            return;
+
+        BlockPos strikePos = BlockPos.containing(hit.getLocation());
+        Level level = trident.level();
+
+        // Create lightning
+        LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level);
+        if (bolt == null)
+            return;
+
+        bolt.moveTo(Vec3.atBottomCenterOf(strikePos));
+        bolt.setCause(living);
+
+        level.addFreshEntity(bolt);
+    }
+
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if(event.getType() == VillagerProfession.FARMER) {
+        if (event.getType() == VillagerProfession.FARMER) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             // Level 1
@@ -105,9 +147,10 @@ public class ModEvents {
                     2, 12, 0.075f));
         }
 
-        if(event.getType() == VillagerProfession.LIBRARIAN) {
+        if (event.getType() == VillagerProfession.LIBRARIAN) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(Enchantments.THORNS, 2));
+            ItemStack enchantedBook = EnchantedBookItem
+                    .createForEnchantment(new EnchantmentInstance(Enchantments.THORNS, 2));
 
             // Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
@@ -131,8 +174,8 @@ public class ModEvents {
         rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.EMERALD, 24),
                 new ItemStack(ModItems.FOSSILIZED_DRUMSTICK.get(), 1),
-                2, 12, 0.15f));}
-
+                2, 12, 0.15f));
+    }
 
     @SubscribeEvent
     public static void onLivingHeal(LivingHealEvent event) {
@@ -143,4 +186,3 @@ public class ModEvents {
     }
 
 }
-
