@@ -236,8 +236,7 @@ public class ModItems {
 
         public static final RegistryObject<Item> LIGHTNING_ROD_MODIFIED_FOSSIL_HELMET = ITEMS.register(
                         "lightning_rod_modified_fossil_helmet",
-                        () -> new ModSimpleArmorItem(ModArmorMaterials.LIGHTNING_ROD_MODIFIED_FOSSIL,
-                                        ArmorItem.Type.HELMET, new Item.Properties()));
+                        () -> new LightningRodModifiedFossilHelmetItem(ArmorItem.Type.HELMET));
         public static final RegistryObject<Item> CLOCK_MODIFIED_FOSSIL_CHESTPLATE = ITEMS.register(
                         "clock_modified_fossil_chestplate",
                         () -> new ModSimpleArmorItem(ModArmorMaterials.CLOCK_MODIFIED_FOSSIL, ArmorItem.Type.CHESTPLATE,
