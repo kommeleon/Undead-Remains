@@ -128,13 +128,39 @@ public class FossilLuckyBlock extends Block {
                     }
                     default -> toolDrop = ItemStack.EMPTY;
                 }
-
-                // 2. Drop the tool
                 if (!toolDrop.isEmpty()) {
                     Block.popResource(serverLevel, pPos, toolDrop);
                 }
-
-                // 3. Drop the bonus item (if any)
+                if (!bonusDrop.isEmpty()) {
+                    Block.popResource(serverLevel, pPos, bonusDrop);
+                }
+            } else if (choice == 8) { ///////// EVENT_8 /////////
+                serverLevel.setBlock(pPos, Blocks.SMITHING_TABLE.defaultBlockState(), 3);
+                ItemStack toolDrop;
+                ItemStack bonusDrop = ItemStack.EMPTY;
+                int toolChoice = random.nextInt(4);
+                switch (toolChoice) {
+                    case 0 -> { // helmet
+                        toolDrop = new ItemStack(ModItems.FOSSIL_HELMET.get());
+                        bonusDrop = new ItemStack(Items.LIGHTNING_ROD);
+                    }
+                    case 1 -> { // chestplate
+                        toolDrop = new ItemStack(ModItems.FOSSIL_CHESTPLATE.get());
+                        bonusDrop = new ItemStack(Items.CLOCK);
+                    }
+                    case 2 -> { // leggings
+                        toolDrop = new ItemStack(ModItems.FOSSIL_LEGGINGS.get());
+                        bonusDrop = new ItemStack(Items.SCUTE);
+                    }
+                    case 3 -> { // boots
+                        toolDrop = new ItemStack(ModItems.FOSSIL_BOOTS.get());
+                        bonusDrop = new ItemStack(Items.ECHO_SHARD);
+                    }
+                    default -> toolDrop = ItemStack.EMPTY;
+                }
+                if (!toolDrop.isEmpty()) {
+                    Block.popResource(serverLevel, pPos, toolDrop);
+                }
                 if (!bonusDrop.isEmpty()) {
                     Block.popResource(serverLevel, pPos, bonusDrop);
                 }
