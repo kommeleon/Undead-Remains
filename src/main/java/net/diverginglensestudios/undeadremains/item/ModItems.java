@@ -88,6 +88,9 @@ public class ModItems {
         public static final RegistryObject<Item> WRAP = ITEMS.register("wrap",
                         () -> new Item(new Item.Properties().food(ModFoods.WRAP)));
 
+        public static final RegistryObject<Item> CALIPO_BERRIES = ITEMS.register("calipo_berries",
+                        () -> new Item(new Item.Properties().food(ModFoods.CALIPO_BERRIES)));
+
         // Fuel Items
         public static final RegistryObject<Item> METATURBONITE = ITEMS.register("metaturbonite",
                         () -> new FuelItem(new Item.Properties().rarity(Rarity.RARE), 25000));

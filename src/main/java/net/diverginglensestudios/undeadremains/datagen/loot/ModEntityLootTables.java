@@ -65,7 +65,8 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.THE_FOSSILS_EYE.get())
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.3f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.3f))))
+                                );
 
         this.add(ModEntities.FOSSILIZED_ZOMBIE.get(),
                 LootTable.lootTable()
@@ -84,14 +85,16 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(0.1f))
                                 .add(LootItem.lootTableItem(ModItems.THE_FOSSILS_EYE.get())
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.3f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.3f))))
+                                );
 
         this.add(ModEntities.TREE_ZOMBIE.get(),
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModBlocks.ASH_LOG.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(1f))))
+                                );
 
         this.add(ModEntities.BIG_WOODLING.get(),
                 LootTable.lootTable()
@@ -102,7 +105,8 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModBlocks.ASH_LEAVES.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(1f))))
+                                );
 
         this.add(ModEntities.SMALL_WOODLING.get(),
                 LootTable.lootTable()
@@ -113,14 +117,16 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModBlocks.ASH_LEAVES.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(1f))))
+                                );
 
         this.add(ModEntities.SUPREME_ZOMBIE.get(),
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.RARE_FOSSIL.get())
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.05f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))))
+                                );
 
         this.add(ModEntities.COW_ZOMBIE.get(),
                 LootTable.lootTable()
@@ -141,21 +147,24 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F))))
                                 .add(LootItem.lootTableItem(ModItems.COW_BOOTS.get()).setWeight(25)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F))))
-                                .when(LootItemRandomChanceCondition.randomChance(0.5f))));
+                                .when(LootItemRandomChanceCondition.randomChance(0.5f)))
+                        );
 
         this.add(ModEntities.SPIKE.get(),
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.SPIKE.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 3.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(1f))))
+                                );
 
         this.add(ModEntities.HAMMER_ZOMBIE.get(),
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(Items.ROTTEN_FLESH)
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(1f))))
+                                );
 
         this.add(ModEntities.STRAY_ZOMBIE.get(),
                 LootTable.lootTable()
@@ -166,7 +175,8 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(Blocks.PACKED_ICE)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.1f))))
+                                );
 
         this.add(ModEntities.FOUR_EYED_XANARIAN.get(),
                 LootTable.lootTable()
@@ -177,7 +187,12 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.XANARIAN_LEATHER.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.9f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.6f))))
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(ModItems.RAW_XANARIAN_MEAT.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 3.0f)))
+                                        .when(LootItemRandomChanceCondition.randomChance(0.9f))))
+                                );
 
         this.add(ModEntities.HORNED_XANARIAN.get(),
                 LootTable.lootTable()
@@ -192,7 +207,12 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.XANARIAN_HORN.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.1f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.1f))))
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(ModItems.RAW_XANARIAN_MEAT.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 3.0f)))
+                                        .when(LootItemRandomChanceCondition.randomChance(0.9f))))
+                                );
 
         this.add(ModEntities.XANARIAN.get(),
                 LootTable.lootTable()
@@ -203,7 +223,12 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.XANARIAN_LEATHER.get())
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 2.0f)))
-                                        .when(LootItemRandomChanceCondition.randomChance(0.9f)))));
+                                        .when(LootItemRandomChanceCondition.randomChance(0.9f))))
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(ModItems.RAW_XANARIAN_MEAT.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0f, 3.0f)))
+                                        .when(LootItemRandomChanceCondition.randomChance(0.9f))))
+                                );
 
     }
 }

@@ -227,6 +227,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.CALIPO_DOOR.get());
                         pOutput.accept(ModBlocks.CALIPO_TRAPDOOR.get());
 
+                        pOutput.accept(ModItems.CALIPO_BERRIES.get());
+
                         pOutput.accept(ModItems.ASH_SAPLING_ITEM.get());
                         pOutput.accept(ModBlocks.ASH_LEAVES.get());
 

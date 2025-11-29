@@ -388,7 +388,7 @@ public class ModBlocks {
 
         // Crops
         public static final RegistryObject<Block> CALIPO_BERRY_VINE = registerBlock("calipo_berry_vine",
-                        () -> new CalipoBerryVineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+                        () -> new CalipoBerryVineBlock(BlockBehaviour.Properties.copy(Blocks.CAVE_VINES)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

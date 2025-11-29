@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-16T15:19:46.2118966	Item Models: undeadremains
+// 1.20.1	2025-11-29T14:07:54.6820804	Item Models: undeadremains
 2ab9beff061ae44e53920d54046f6ff3a3d6904a assets/undeadremains/models/item/amethyst_modified_fossil_sword.json
 dbef713152a3abb4439f879d96f5829998a2d16a assets/undeadremains/models/item/ash_boat.json
 966ddf2d5590b696a89ba29b85f4a8ab5382db6d assets/undeadremains/models/item/ash_button.json
@@ -15,6 +15,7 @@ ca3e8e893a4d118625a82907419fd69f89ec3138 assets/undeadremains/models/item/ash_pr
 061cade27f8774122daee7811153ce88924a1c37 assets/undeadremains/models/item/ash_trapdoor.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/undeadremains/models/item/big_woodling_spawn_egg.json
 1ad62a133481a289df9200570e607415ada587ea assets/undeadremains/models/item/blaze_rod_modified_fossil_pickaxe.json
+c167fe892a08718acbaebe457994a179f544f652 assets/undeadremains/models/item/calipo_berries.json
 e2a153ead0dd3a86c487703b3b0c3c97f686c14c assets/undeadremains/models/item/calipo_button.json
 d6ba2bf2fb41a102b9e2ce68fe5c96796440922e assets/undeadremains/models/item/calipo_door.json
 34ac67b06f6f1055b391fce6fc7b937aa3843267 assets/undeadremains/models/item/calipo_fence.json

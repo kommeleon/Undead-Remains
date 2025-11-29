@@ -39,7 +39,7 @@ public class FossilLuckyBlock extends Block {
         super.destroy(pLevel, pPos, pState);
         if (pLevel instanceof ServerLevel serverLevel) {
             Random random = new Random();
-            int choice = random.nextInt(7) + 1; // Number of events
+            int choice = random.nextInt(8) + 1; // Number of events
             if (choice == 1) {////////// EVENT_1//////////
                 SupremeZombieEntity customEntity = new SupremeZombieEntity(ModEntities.SUPREME_ZOMBIE.get(),
                         serverLevel);
@@ -70,7 +70,7 @@ public class FossilLuckyBlock extends Block {
 
             } else if (choice == 4) {////////// EVENT_4//////////
                 ItemStack toolDrop;
-                int toolChoice = random.nextInt(5); // 0-4 for different armor pieces
+                int toolChoice = random.nextInt(5); 
                 switch (toolChoice) {
                     case 0 -> toolDrop = new ItemStack(ModItems.RARE_FOSSIL_AXE.get());
                     case 1 -> toolDrop = new ItemStack(ModItems.RARE_FOSSIL_HOE.get());
