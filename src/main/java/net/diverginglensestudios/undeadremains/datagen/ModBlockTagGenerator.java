@@ -179,6 +179,9 @@ this.tag(Tags.Blocks.ORES)
 this.tag(BlockTags.create(new ResourceLocation("forge", "storage_blocks/fossil")))
 .add(ModBlocks.FOSSIL_BLOCK.get());
 
+this.tag(BlockTags.create(new ResourceLocation("forge", "supports_xanarian_foliage")))
+.add(ModBlocks.LIVING_LANGSTONE.get());
+
 this.tag(BlockTags.create(new ResourceLocation("forge", "storage_blocks/raw_fossil")))
 .add(ModBlocks.RAW_FOSSIL_BLOCK.get());
 

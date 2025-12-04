@@ -380,7 +380,7 @@ public class ModBlocks {
 
         // Plants
         public static final RegistryObject<Block> XANAS_FLOWER = registerBlock("xanas_flower",
-                        () -> new FlowerBlock(MobEffects.SLOW_FALLING, 200, BlockBehaviour.Properties.copy(Blocks.POPPY)));
+                        () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.POPPY)));
 
         // Saplings
         public static final RegistryObject<Block> ASH_SAPLING = BLOCKS.register("ash_sapling",
