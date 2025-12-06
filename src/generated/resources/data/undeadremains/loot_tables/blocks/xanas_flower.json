@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "undeadremains:xanas_flower"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "undeadremains:blocks/calipo_berry_vine"
+  "random_sequence": "undeadremains:blocks/xanas_flower"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "xanarian_meat",
+  "ingredient": {
+    "item": "undeadremains:raw_xanarian_meat"
+  },
+  "result": "undeadremains:xanarian_meat"
+}

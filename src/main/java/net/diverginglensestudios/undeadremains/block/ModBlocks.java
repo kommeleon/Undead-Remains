@@ -380,8 +380,31 @@ public class ModBlocks {
 
         // Plants
         public static final RegistryObject<Block> XANAS_FLOWER = registerBlock("xanas_flower",
-                        () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.POPPY)));
+                        () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
+        public static final RegistryObject<Block> POTTED_XANAS_FLOWER = BLOCKS.register("potted_xanas_flower",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.XANAS_FLOWER,
+                        BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+        public static final RegistryObject<Block> ROXA_FLOWER = registerBlock("roxa_flower",
+                () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+
+        public static final RegistryObject<Block> POTTED_ROXA_FLOWER = BLOCKS.register("potted_roxa_flower",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.ROXA_FLOWER,
+                        BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+        public static final RegistryObject<Block> XELKS_FLOWER = registerBlock("xelks_flower",
+                () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+
+        public static final RegistryObject<Block> POTTED_XELKS_FLOWER = BLOCKS.register("potted_xelks_flower",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.XELKS_FLOWER,
+                        BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+        public static final RegistryObject<Block> LYXOR_FLOWER = registerBlock("lyxor_flower",
+                () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.ALLIUM).lightLevel((state) -> 2)));
+
+        public static final RegistryObject<Block> CALIPO_GRASS = registerBlock("calipo_grass",
+                () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.GRASS)));
         // Saplings
         public static final RegistryObject<Block> ASH_SAPLING = BLOCKS.register("ash_sapling",
                         () -> new SaplingBlock(new AshTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)

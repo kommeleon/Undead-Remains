@@ -18,7 +18,7 @@
 - If needed create a new loot table from ground up.
 
 ### In _ModBlockStateProvider_:
--Copy from similar block
+- Copy from similar block
 
 ## Recommended additions:
 Add item tags in _ModBlockTagGenerator_

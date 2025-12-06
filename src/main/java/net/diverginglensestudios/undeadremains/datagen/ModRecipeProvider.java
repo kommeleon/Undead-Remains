@@ -39,6 +39,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         private static final List<ItemLike> FOSSIL_BLOCK_SMELTABLES = List.of(
                         ModBlocks.RAW_FOSSIL_BLOCK.get());
 
+        // XANARIAN_MEAT_SMELTABLES
+        private static final List<ItemLike> XANARIAN_MEAT_SMELTABLES = List.of(
+                        ModItems.RAW_XANARIAN_MEAT.get());
+
+
         public ModRecipeProvider(PackOutput pOutput) {
                 super(pOutput);
         }
@@ -53,7 +58,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                                 200, "langrite");
                 oreSmelting(pWriter, FOSSIL_BLOCK_SMELTABLES, RecipeCategory.MISC, ModItems.FOSSIL.get(), 2.5f, 2000,
                                 "fossil");
+                oreSmelting(pWriter, XANARIAN_MEAT_SMELTABLES, RecipeCategory.MISC, ModItems.XANARIAN_MEAT.get(), 0.25f, 100,
+                                "xanarian_meat");
                 // ORE SMELTING//
+
+                // Item SMOKING //
+                itemSmoking(pWriter, XANARIAN_MEAT_SMELTABLES, RecipeCategory.MISC, ModItems.XANARIAN_MEAT.get(), 0.25f, 100,
+                                "xanarian_meat");
+                // Item SMOKING //
 
                 // ORE BLASTING//
                 oreBlasting(pWriter, FOSSIL_SMELTABLES, RecipeCategory.MISC, ModItems.FOSSIL.get(), 0.25f, 100,
@@ -944,6 +956,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         String pGroup) {
                 oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,
                                 pExperience, pCookingTIme, pGroup, "_from_smelting");
+        }
+
+        protected static void itemSmoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,
+                        RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme,
+                        String pGroup) {
+                oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredients, pCategory, pResult,
+                                pExperience, pCookingTIme, pGroup, "_from_smoking");
         }
 
         protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "undeadremains:xelks_flower"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "undeadremains:blocks/calipo_berry_vine"
+  "random_sequence": "undeadremains:blocks/xelks_flower"
 }

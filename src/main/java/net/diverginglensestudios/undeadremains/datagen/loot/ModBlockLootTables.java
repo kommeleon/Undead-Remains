@@ -12,6 +12,7 @@ import net.diverginglensestudios.undeadremains.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -24,6 +25,8 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import java.util.Set;
+
+import org.checkerframework.checker.units.qual.g;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
         public ModBlockLootTables() {
@@ -102,7 +105,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.dropSelf(ModBlocks.STRIPPED_CALIPO_LOG.get());
                 this.dropSelf(ModBlocks.STRIPPED_CALIPO_WOOD.get());
                 this.dropSelf(ModBlocks.CALIPO_PLANKS.get());
-                this.dropSelf(ModBlocks.CALIPO_BERRY_VINE.get());
+                this.dropSelf(ModBlocks.XANAS_FLOWER.get());
+                this.dropSelf(ModBlocks.ROXA_FLOWER.get());
+                this.dropSelf(ModBlocks.LYXOR_FLOWER.get());
+                this.dropSelf(ModBlocks.XELKS_FLOWER.get());
+
+                this.dropOther(ModBlocks.CALIPO_BERRY_VINE.get(), Items.AIR);
+
+                this.add(ModBlocks.CALIPO_GRASS.get(),createGrassTable(ModBlocks.CALIPO_GRASS.get(), Items.AIR));
+
+                this.add(ModBlocks.POTTED_XANAS_FLOWER.get(), createPotFlowerItemTable(ModBlocks.XANAS_FLOWER.get()));
+                this.add(ModBlocks.POTTED_ROXA_FLOWER.get(), createPotFlowerItemTable(ModBlocks.ROXA_FLOWER.get()));
+                this.add(ModBlocks.POTTED_XELKS_FLOWER.get(), createPotFlowerItemTable(ModBlocks.XELKS_FLOWER.get()));
 
                 // SingleItemTable(with silktouch)
                 this.add(ModBlocks.LIVING_LANGSTONE.get(),
@@ -217,6 +231,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                                                 .apply(SetItemCountFunction.setCount(UniformGenerator
                                                                                 .between(1.0F, 1.0F)))));
         }
+
+        protected LootTable.Builder createGrassTable(Block pBlock, Item pItem) {
+                return createShearsDispatchTable(pBlock, this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(pItem)
+                        .when(LootItemRandomChanceCondition.randomChance(0.125F))
+                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))));
+        }
+
 
         protected LootTable.Builder createFossilLikeOreDrops(Block pBlock, Item item, Item seconditem) {
                 return LootTable.lootTable()

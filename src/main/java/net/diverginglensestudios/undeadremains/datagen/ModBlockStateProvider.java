@@ -125,7 +125,25 @@ simpleBlock(ModBlocks.LIVING_LANGSTONE.get(), models().cubeBottomTop(
         blockItem(ModBlocks.STRIPPED_CALIPO_LOG);
         blockItem(ModBlocks.STRIPPED_CALIPO_WOOD);
 
-        
+        //Flowers
+        simpleBlockWithItem(ModBlocks.XANAS_FLOWER.get(), models().cross(blockTexture(ModBlocks.XANAS_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_XANAS_FLOWER.get(), models().singleTexture("potted_xanas_flower", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.ROXA_FLOWER.get(), models().cross(blockTexture(ModBlocks.ROXA_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_ROXA_FLOWER.get(), models().singleTexture("potted_roxa_flower", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.LYXOR_FLOWER.get(), models().cross(blockTexture(ModBlocks.LYXOR_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.LYXOR_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.XELKS_FLOWER.get(), models().cross(blockTexture(ModBlocks.XELKS_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_XELKS_FLOWER.get(), models().singleTexture("potted_xelks_flower", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.CALIPO_GRASS.get(), models().cross(blockTexture(ModBlocks.CALIPO_GRASS.get()).getPath(),
+                blockTexture(ModBlocks.CALIPO_GRASS.get())).renderType("cutout"));
+
         //DifferentlyShapedBlocks
         signBlock(((StandingSignBlock) ModBlocks.ASH_SIGN.get()), ((WallSignBlock) ModBlocks.ASH_WALL_SIGN.get()),
                 blockTexture(ModBlocks.ASH_PLANKS.get()));

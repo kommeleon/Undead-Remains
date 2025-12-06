@@ -229,6 +229,11 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModItems.CALIPO_BERRIES.get());
 
+                        pOutput.accept(ModBlocks.CALIPO_GRASS.get());    
+                        pOutput.accept(ModBlocks.XELKS_FLOWER.get());
+                        pOutput.accept(ModBlocks.LYXOR_FLOWER.get());
+                        pOutput.accept(ModBlocks.ROXA_FLOWER.get());
+                        pOutput.accept(ModBlocks.XANAS_FLOWER.get());
                         pOutput.accept(ModItems.ASH_SAPLING_ITEM.get());
                         pOutput.accept(ModBlocks.ASH_LEAVES.get());
 

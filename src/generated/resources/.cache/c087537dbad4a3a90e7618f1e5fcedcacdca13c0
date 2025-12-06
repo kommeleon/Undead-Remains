@@ -1,15 +1,16 @@
-// 1.20.1	2025-11-07T10:42:35.815674084	Tags for minecraft:block mod id undeadremains
+// 1.20.1	2025-12-06T10:39:11.5329346	Tags for minecraft:block mod id undeadremains
 fda8872f7a47579a36f4625a5250592c1961ff35 data/forge/tags/blocks/ores.json
 1bd3aadce88a31a063e95dfb4b5c5e3f5029e023 data/forge/tags/blocks/storage_blocks.json
 e5be615c16c61da7f6d2337ed04402ae0ec1053f data/forge/tags/blocks/storage_blocks/fossil.json
 a25fe28f0fff0d7996dee93b193817817094fcc9 data/forge/tags/blocks/storage_blocks/raw_fossil.json
+1a5ed1443640dfad25c84b9a959200e0db1ba120 data/forge/tags/blocks/supports_xanarian_foliage.json
 bd9556688c79c57ab14fc14f04b829b2ee12b6bf data/minecraft/tags/blocks/all_hanging_signs.json
 ed6bd95dc3a314722bd5acca291e0a3e04018833 data/minecraft/tags/blocks/ash_logs.json
 4c1504c8684deb9a4747bd87c21c6142ecaddc61 data/minecraft/tags/blocks/buttons.json
 4388b31535dbfb58e458de3e9e25d2429e4dab1a data/minecraft/tags/blocks/dirt.json
 46b6b3ba1e2ab93defb34f48f485055f10386fa1 data/minecraft/tags/blocks/doors.json
-34106cd1455fe85d292b955239cab412b6e7ba47 data/minecraft/tags/blocks/fence_gates.json
 e22cf3b8ec811e4fce4d60d86f699894b3188e5d data/minecraft/tags/blocks/fences.json
+34106cd1455fe85d292b955239cab412b6e7ba47 data/minecraft/tags/blocks/fence_gates.json
 a32c54be897cbf3d379ef029cc788df7ba90c82d data/minecraft/tags/blocks/leaves.json
 e79bb8bb5046b7c05cb8364407b784958ff5fab2 data/minecraft/tags/blocks/logs.json
 e79bb8bb5046b7c05cb8364407b784958ff5fab2 data/minecraft/tags/blocks/logs_that_burn.json
