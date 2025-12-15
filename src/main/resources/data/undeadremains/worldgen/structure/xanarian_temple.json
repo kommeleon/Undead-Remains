@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:jigsaw",
+
+  "start_pool": "undeadremains:xanarian_temple/start_pool",
+
+  "size": 2,
+  "max_distance_from_center": 80,
+
+  "biomes": "#undeadremains:has_structure/xanarian_temple",
+
+  "step": "underground_decoration",
+
+  "terrain_adaptation": "beard_thin",
+
+  "start_height": {
+    "type": "uniform",
+    "min_inclusive": {
+      "absolute": 30
+    },
+    "max_inclusive": {
+      "below_top": 10
+    }
+  },
+
+  "use_expansion_hack": false,
+
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:parrot",
+          "weight": 1,
+          "minCount": 1,
+          "maxCount": 4
+        }
+      ]
+    }
+  }
+}

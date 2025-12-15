@@ -1,0 +1,17 @@
+{
+    "structures": [
+      {
+        "structure": "undeadremains:xanarian_temple",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "salt": 9378462,
+  
+      "spacing": 20,
+  
+      "separation": 6,
+  
+      "type": "minecraft:random_spread"
+    }
+  }

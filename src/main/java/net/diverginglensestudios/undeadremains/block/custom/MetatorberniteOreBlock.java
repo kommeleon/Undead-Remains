@@ -27,7 +27,6 @@ public class MetatorberniteOreBlock extends Block{
     
     public MetatorberniteOreBlock(Properties pProperties) {
         super(pProperties);
-        //TODO Auto-generated constructor stub
     }
 
    @Override

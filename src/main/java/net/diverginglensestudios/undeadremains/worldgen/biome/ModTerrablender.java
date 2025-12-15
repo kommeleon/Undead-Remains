@@ -10,6 +10,8 @@ package net.diverginglensestudios.undeadremains.worldgen.biome;
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.minecraft.resources.ResourceLocation;
 import terrablender.api.Regions;
+import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 
 public class ModTerrablender {
     public static void registerBiomes() {
