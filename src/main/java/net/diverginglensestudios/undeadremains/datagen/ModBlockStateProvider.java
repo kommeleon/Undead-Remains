@@ -12,6 +12,7 @@ import java.util.function.Function;
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.block.ModBlocks;
 import net.diverginglensestudios.undeadremains.block.custom.CalipoBerryVineBlock;
+import net.diverginglensestudios.undeadremains.block.custom.XansLeavesBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.blockstates.MultiVariantGenerator;
@@ -23,6 +24,7 @@ import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -224,7 +226,25 @@ simpleBlock(ModBlocks.LIVING_LANGSTONE.get(), models().cubeBottomTop(
         doorBlockWithRenderType(((DoorBlock) ModBlocks.FOSSIL_DOOR.get()), modLoc("block/fossil_door_bottom"), modLoc("block/fossil_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.FOSSIL_TRAPDOOR.get()), modLoc("block/fossil_trapdoor"), true, "cutout");
 
+        makexansleafCrop((CropBlock) ModBlocks.XANS_LEAVES.get(), "xansleaf_stage", "xansleaf_stage");
+
+///////////////////////////////////////////////////////////////////
+//////////////////////////////METHODS//////////////////////////////
+///////////////////////////////////////////////////////////////////
 }
+
+        public void makexansleafCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> xansLeafStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] xansLeafStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((XansLeavesBlock) block).getAgeProperty()),
+                new ResourceLocation(UndeadRemains.MOD_ID, "block/" + textureName + state.getValue(((XansLeavesBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
 
 private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),

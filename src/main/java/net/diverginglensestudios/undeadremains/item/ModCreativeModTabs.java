@@ -228,6 +228,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.CALIPO_TRAPDOOR.get());
 
                         pOutput.accept(ModItems.CALIPO_BERRIES.get());
+                        pOutput.accept(ModBlocks.XANS_LEAVES.get());
 
                         pOutput.accept(ModBlocks.CALIPO_GRASS.get());    
                         pOutput.accept(ModBlocks.XELKS_FLOWER.get());

@@ -8,7 +8,9 @@
 package net.diverginglensestudios.undeadremains.datagen.loot;
 
 import net.diverginglensestudios.undeadremains.block.ModBlocks;
+import net.diverginglensestudios.undeadremains.block.custom.XansLeavesBlock;
 import net.diverginglensestudios.undeadremains.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -23,6 +25,8 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import java.util.Set;
 
@@ -117,6 +121,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.add(ModBlocks.POTTED_XANAS_FLOWER.get(), createPotFlowerItemTable(ModBlocks.XANAS_FLOWER.get()));
                 this.add(ModBlocks.POTTED_ROXA_FLOWER.get(), createPotFlowerItemTable(ModBlocks.ROXA_FLOWER.get()));
                 this.add(ModBlocks.POTTED_XELKS_FLOWER.get(), createPotFlowerItemTable(ModBlocks.XELKS_FLOWER.get()));
+
+                LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.XANS_LEAVES.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(XansLeavesBlock.AGE, 5));
+
+                this.add(ModBlocks.XANS_LEAVES.get(), createCropDrops(ModBlocks.XANS_LEAVES.get(), ModItems.XANS_LEAF.get(),
+                        ModItems.XANS_LEAVES_SEEDS.get(), lootitemcondition$builder));
 
                 // SingleItemTable(with silktouch)
                 this.add(ModBlocks.LIVING_LANGSTONE.get(),

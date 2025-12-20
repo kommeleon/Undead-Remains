@@ -92,6 +92,9 @@ public class ModItems {
         public static final RegistryObject<Item> CALIPO_BERRIES = ITEMS.register("calipo_berries",
                         () -> new ItemNameBlockItem(ModBlocks.CALIPO_BERRY_VINE.get(), (new Item.Properties()).food(ModFoods.CALIPO_BERRIES)));
 
+        public static final RegistryObject<Item> XANS_LEAF = ITEMS.register("xans_leaf",
+                        () -> new ItemNameBlockItem(ModBlocks.XANS_LEAVES.get(), (new Item.Properties()).food(ModFoods.XANS_LEAF)));
+
         // Fuel Items
         public static final RegistryObject<Item> METATURBONITE = ITEMS.register("metaturbonite",
                         () -> new FuelItem(new Item.Properties().rarity(Rarity.RARE), 25000));
@@ -263,6 +266,9 @@ public class ModItems {
 
         public static final RegistryObject<Item> CREEPER_SAPLING_ITEM = ITEMS.register("creeper_sapling",
                         () -> new BlockItem(ModBlocks.CREEPER_SAPLING.get(), new Item.Properties()));
+
+         public static final RegistryObject<Item> XANS_LEAVES_SEEDS = ITEMS.register("xans_leaves_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.XANS_LEAVES.get(), new Item.Properties()));
 
         // Music
         public static final RegistryObject<Item> UNDYING_WHISPERS_MUSIC_DISC = ITEMS.register(

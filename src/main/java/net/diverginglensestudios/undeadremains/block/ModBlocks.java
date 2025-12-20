@@ -378,6 +378,12 @@ public class ModBlocks {
         public static final RegistryObject<Block> CALIPO_BERRY_VINE = registerBlock("calipo_berry_vine",
                         () -> new CalipoBerryVineBlock(BlockBehaviour.Properties.copy(Blocks.CAVE_VINES)));
 
+        public static final RegistryObject<Block> XANS_LEAVES = registerBlock("xans_leaves",
+                        () -> new XansLeavesBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+                                        .sound(SoundType.CROP).noOcclusion().noCollission()));
+
+
+
         // Plants
         public static final RegistryObject<Block> XANAS_FLOWER = registerBlock("xanas_flower",
                         () -> new ModFlowerBlock(MobEffects.SLOW_FALLING, 200,"supports_xanarian_foliage", BlockBehaviour.Properties.copy(Blocks.ALLIUM)));

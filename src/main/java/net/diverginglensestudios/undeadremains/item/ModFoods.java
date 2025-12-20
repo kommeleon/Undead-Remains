@@ -63,5 +63,9 @@ public class ModFoods {
                         .saturationMod(0.1f)
                         .build();
 
+        public static final FoodProperties XANS_LEAF = new FoodProperties.Builder().nutrition((int) 0.5f).fast()
+                        .saturationMod(0.1f)
+                        .build();
+
 
 }
