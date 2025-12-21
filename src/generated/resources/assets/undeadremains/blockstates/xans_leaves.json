@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "undeadremains:block/xansleaf_stage0"
+    },
+    "age=1": {
+      "model": "undeadremains:block/xansleaf_stage1"
+    },
+    "age=2": {
+      "model": "undeadremains:block/xansleaf_stage2"
+    },
+    "age=3": {
+      "model": "undeadremains:block/xansleaf_stage3"
+    },
+    "age=4": {
+      "model": "undeadremains:block/xansleaf_stage4"
+    },
+    "age=5": {
+      "model": "undeadremains:block/xansleaf_stage5"
+    }
+  }
+}

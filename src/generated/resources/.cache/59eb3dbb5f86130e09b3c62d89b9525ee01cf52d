@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-06T11:17:55.6163272	Loot Tables
+// 1.20.1	2025-12-21T12:49:59.7655673	Loot Tables
 76a75524e5dcd7d1c9d5de5047a92ee68b60e2f2 data/undeadremains/loot_tables/blocks/ash_button.json
 8806032776c8bea89f252419be9030ea76e9d5fc data/undeadremains/loot_tables/blocks/ash_door.json
 230184633e7e39e87f97d44c09c0838cf3798f4d data/undeadremains/loot_tables/blocks/ash_fence.json
@@ -101,6 +101,7 @@ ba72fbb05ea93cb64692ed218cccede613dd13fe data/undeadremains/loot_tables/blocks/p
 55699d66ef0324b2250631a65753c8b4f8a93fdb data/undeadremains/loot_tables/blocks/supreme_pilar.json
 edb3c85a5a9e591e309780531e891a3b0eeddfeb data/undeadremains/loot_tables/blocks/supreme_tiles.json
 5b1c044b7c74f786e3d2778597f27c227ce6c6df data/undeadremains/loot_tables/blocks/xanas_flower.json
+a88f93f5b38f31fdf4eccdba051a4857727da1d0 data/undeadremains/loot_tables/blocks/xans_leaves.json
 c496f2f2e014cbce91410db577b069cfbb1dbb16 data/undeadremains/loot_tables/blocks/xelks_flower.json
 36289db25d64f9f04ac4471e7c930e7854297f4a data/undeadremains/loot_tables/entities/big_woodling.json
 c68414d7ba5801bf3ce6bbb13c200b82dc7f4a1b data/undeadremains/loot_tables/entities/cow_zombie.json

@@ -902,6 +902,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.XANARIAN_KEBAB.get(), 1)// resulting
                                                                                                        // items
                                 .requires(ModItems.XANARIAN_MEAT.get())// required items
+                                .requires(ModItems.XANS_LEAF.get())// required items
+                                .requires(ModItems.CALIPO_BERRIES.get())// required items
                                 .requires(Items.BREAD)// required items
                                 .unlockedBy(getHasName(ModItems.XANARIAN_MEAT.get()),
                                                 has(ModItems.XANARIAN_MEAT.get()))
@@ -919,6 +921,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                                                                                                             // items
                                 .requires(ModItems.XANARIAN_MEAT.get())// required items
                                 .requires(ModItems.WRAP.get())// required items
+                                .requires(ModItems.CALIPO_BERRIES.get())// required items
+                                .requires(ModItems.XANS_LEAF.get())// required items
                                 .unlockedBy(getHasName(ModItems.XANARIAN_MEAT.get()),
                                                 has(ModItems.XANARIAN_MEAT.get()))
                                 .save(pWriter);

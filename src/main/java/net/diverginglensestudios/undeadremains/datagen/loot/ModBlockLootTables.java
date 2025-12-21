@@ -127,7 +127,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(XansLeavesBlock.AGE, 5));
 
                 this.add(ModBlocks.XANS_LEAVES.get(), createCropDrops(ModBlocks.XANS_LEAVES.get(), ModItems.XANS_LEAF.get(),
-                        ModItems.XANS_LEAVES_SEEDS.get(), lootitemcondition$builder));
+                        ModItems.XANS_LEAF_SEEDS.get(), lootitemcondition$builder));
 
                 // SingleItemTable(with silktouch)
                 this.add(ModBlocks.LIVING_LANGSTONE.get(),

@@ -82,6 +82,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.XANARIAN_KEBAB_WRAP);
         simpleItem(ModItems.WRAP);
         simpleItem(ModItems.CALIPO_BERRIES);
+        simpleItem(ModItems.XANS_LEAF);
+        simpleItem(ModItems.XANS_LEAF_SEEDS);
         // Saplings
         saplingItem(ModBlocks.ASH_SAPLING);
         saplingItem(ModBlocks.CREEPER_SAPLING);

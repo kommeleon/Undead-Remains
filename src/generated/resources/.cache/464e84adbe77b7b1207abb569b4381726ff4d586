@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-14T08:06:15.9846889	Block States: undeadremains
+// 1.20.1	2025-12-21T12:49:59.7615662	Block States: undeadremains
 aaa74034fa25753f3422a2bc0ee00cc890421117 assets/undeadremains/blockstates/ash_button.json
 8899645691211fd919a8edfb1fef8aac75656ce4 assets/undeadremains/blockstates/ash_door.json
 984c4efabeed11b892b4e20ec4bad601a6a9208d assets/undeadremains/blockstates/ash_fence.json
@@ -102,6 +102,7 @@ a2fc9366216d7f24437c463da1e914fb54794bac assets/undeadremains/blockstates/stripp
 8e9a4b7e4a6676e4a2b90724e9c7cc908856090f assets/undeadremains/blockstates/supreme_pilar.json
 e8a32e3f3b459bf9cb592454e28bce4855de1c98 assets/undeadremains/blockstates/supreme_tiles.json
 a39187c7d494da56b3d926b707fd89ffe83ea303 assets/undeadremains/blockstates/xanas_flower.json
+10007d8c994200e46e30d428720223727ef2ccfd assets/undeadremains/blockstates/xans_leaves.json
 a568638df7a73042bd853c166b335ab736e6d9d2 assets/undeadremains/blockstates/xelks_flower.json
 a28f9d7529a52a1ab36fb7bcebb8fb367ececf97 assets/undeadremains/models/block/ash_button.json
 6f021b6d05bf50b87df096736468346a364b46fb assets/undeadremains/models/block/ash_button_pressed.json
@@ -297,6 +298,12 @@ abb4f8498442fe9dba15792612e1b5b9829fa62e assets/undeadremains/models/block/strip
 9bf858e72814a9cea0447554fc61ae14d1d94600 assets/undeadremains/models/block/supreme_pilar_horizontal.json
 b6bba41df30aeec344ae9f598beef9e9156b8933 assets/undeadremains/models/block/supreme_tiles.json
 d53569e34159c36936edf129d5ebfae9e5f37ea6 assets/undeadremains/models/block/xanas_flower.json
+da25427a2b394f63481ce5dd5d0b3b34a810239e assets/undeadremains/models/block/xansleaf_stage0.json
+64d0e9c04c8a04f4953cfb5608c2a8249fa04b6c assets/undeadremains/models/block/xansleaf_stage1.json
+0fe0c341595c87a1b2f0162228c65b57c536adf9 assets/undeadremains/models/block/xansleaf_stage2.json
+bf2523af522ffc96b604075e2c8a0283a600acd9 assets/undeadremains/models/block/xansleaf_stage3.json
+39136dc258002701ce6aba5752e9982bd658e317 assets/undeadremains/models/block/xansleaf_stage4.json
+f2bb364f92cc7458e007603478f0b0c33b8366ed assets/undeadremains/models/block/xansleaf_stage5.json
 7bcecea88a2d3b025e78025d14e8ede91fb6cca7 assets/undeadremains/models/block/xelks_flower.json
 ec785e69973426454057a7cc6dad32db42be598c assets/undeadremains/models/item/ash_leaves.json
 65c478b726a7dbab2e2edce4b558aaa9883c9027 assets/undeadremains/models/item/ash_log.json
