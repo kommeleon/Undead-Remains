@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-21T12:49:59.7655673	Loot Tables
+// 1.20.1	2025-12-21T17:53:25.2279709	Loot Tables
 76a75524e5dcd7d1c9d5de5047a92ee68b60e2f2 data/undeadremains/loot_tables/blocks/ash_button.json
 8806032776c8bea89f252419be9030ea76e9d5fc data/undeadremains/loot_tables/blocks/ash_door.json
 230184633e7e39e87f97d44c09c0838cf3798f4d data/undeadremains/loot_tables/blocks/ash_fence.json
@@ -21,7 +21,7 @@ a50f77d497a5cacfd83417da79fc9e1a9f78a65b data/undeadremains/loot_tables/blocks/a
 c13bacb9ac0d7e3fab40716d160d1ee722ac3d7b data/undeadremains/loot_tables/blocks/calipo_door.json
 4ffbcc6ed6d583d7096b50a3b9c3f3dd9853b304 data/undeadremains/loot_tables/blocks/calipo_fence.json
 b91fe20cebf8eeade7d9228a8f0d04867e743fc0 data/undeadremains/loot_tables/blocks/calipo_fence_gate.json
-c9b99b2e6f93bbce1aed55f056eb4269f0598701 data/undeadremains/loot_tables/blocks/calipo_grass.json
+d223dc91567480290ff3fa693b7e5471e332846c data/undeadremains/loot_tables/blocks/calipo_grass.json
 af27d1ada34dae7ddcf5e1a6ca74c4837dc329a3 data/undeadremains/loot_tables/blocks/calipo_hanging_sign.json
 f9cefe5409b88efda1c841874eba8dcdb54bb9da data/undeadremains/loot_tables/blocks/calipo_leaves.json
 9bb03b3d4791262048b09ec44a10fde199db2d37 data/undeadremains/loot_tables/blocks/calipo_log.json

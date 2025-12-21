@@ -116,7 +116,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
                 this.dropOther(ModBlocks.CALIPO_BERRY_VINE.get(), Items.AIR);
 
-                this.add(ModBlocks.CALIPO_GRASS.get(),createGrassTable(ModBlocks.CALIPO_GRASS.get(), Items.AIR));
+                this.add(ModBlocks.CALIPO_GRASS.get(),createGrassTable(ModBlocks.CALIPO_GRASS.get(), ModItems.XANS_LEAF_SEEDS.get()));
 
                 this.add(ModBlocks.POTTED_XANAS_FLOWER.get(), createPotFlowerItemTable(ModBlocks.XANAS_FLOWER.get()));
                 this.add(ModBlocks.POTTED_ROXA_FLOWER.get(), createPotFlowerItemTable(ModBlocks.ROXA_FLOWER.get()));
