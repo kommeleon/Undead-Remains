@@ -91,20 +91,17 @@ public class ModEvents {
         }
     }
 
-@SubscribeEvent
-public static void onLivingHurt(LivingHurtEvent event) {
-    if (!event.getSource().is(DamageTypes.FALL)) {
-        return;
+    @SubscribeEvent
+    public static void onLivingHurt(LivingHurtEvent event) {
+        if (!event.getSource().is(DamageTypes.FALL)) {
+            return;
+        }
+        LivingEntity living =  event.getEntity();
+        ItemStack chestplate = living.getItemBySlot(EquipmentSlot.CHEST);
+        if (chestplate.is(ModItems.XANARIAN_SPINE_CHESTPLATE.get())) {
+            event.setAmount(event.getAmount() * 0.5F);
+        }
     }
-    if (!(event.getEntity() instanceof LivingEntity)) {
-        return;
-    }
-    LivingEntity living = (LivingEntity) event.getEntity();
-    ItemStack chestplate = living.getItemBySlot(EquipmentSlot.CHEST);
-    if (chestplate.is(ModItems.XANARIAN_SPINE_CHESTPLATE.get())) {
-        event.setAmount(event.getAmount() * 0.5F);
-    }
-}
 
     @SubscribeEvent
     public static void onTridentImpact(ProjectileImpactEvent event) {
