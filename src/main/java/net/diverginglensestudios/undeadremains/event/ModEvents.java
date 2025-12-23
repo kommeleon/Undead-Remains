@@ -20,6 +20,7 @@ import net.minecraft.core.BlockPos;
 // Import Minecraft and Forge Elements
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -43,6 +44,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -88,6 +90,21 @@ public class ModEvents {
             }
         }
     }
+
+@SubscribeEvent
+public static void onLivingHurt(LivingHurtEvent event) {
+    if (!event.getSource().is(DamageTypes.FALL)) {
+        return;
+    }
+    if (!(event.getEntity() instanceof LivingEntity)) {
+        return;
+    }
+    LivingEntity living = (LivingEntity) event.getEntity();
+    ItemStack chestplate = living.getItemBySlot(EquipmentSlot.CHEST);
+    if (chestplate.is(ModItems.XANARIAN_SPINE_CHESTPLATE.get())) {
+        event.setAmount(event.getAmount() * 0.5F);
+    }
+}
 
     @SubscribeEvent
     public static void onTridentImpact(ProjectileImpactEvent event) {
