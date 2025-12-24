@@ -421,11 +421,6 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission(),
                                         ModBlocks.LIVING_LANGSTONE, false));
 
-        public static final RegistryObject<Block> CREEPER_SAPLING = BLOCKS.register("creeper_sapling",
-                        () -> new ModSaplingBlock(new CreeperTreeGrower(),
-                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission(),
-                                        ModBlocks.LANGSTONE, true));
-
         ////////////////////BLOCKS////////////////////
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -86,7 +86,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.XANS_LEAF_SEEDS);
         // Saplings
         saplingItem(ModBlocks.ASH_SAPLING);
-        saplingItem(ModBlocks.CREEPER_SAPLING);
         saplingItem(ModBlocks.CALIPO_SAPLING);
         // Music_Discs
         simpleItem(ModItems.UNDYING_WHISPERS_MUSIC_DISC);

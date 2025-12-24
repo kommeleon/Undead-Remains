@@ -95,7 +95,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.dropSelf(ModBlocks.FOSSIL_LUCKY_BLOCK.get());
                 this.dropSelf(ModBlocks.METATORBERNITE_LUCKY_BLOCK.get());
                 this.dropSelf(ModBlocks.ASH_SAPLING.get());
-                this.dropSelf(ModBlocks.CREEPER_SAPLING.get());
                 this.dropSelf(ModBlocks.CALIPO_SAPLING.get());
                 this.dropSelf(ModBlocks.METATORBERNITE_BLOCK.get());
                 this.dropSelf(ModBlocks.FOSSIL_POLISHER.get());

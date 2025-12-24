@@ -75,7 +75,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //Saplings
         saplingBlock(ModBlocks.ASH_SAPLING);
         saplingBlock(ModBlocks.CALIPO_SAPLING);
-        saplingBlock(ModBlocks.CREEPER_SAPLING);
 
         glowVineBlock(ModBlocks.CALIPO_BERRY_VINE);
 

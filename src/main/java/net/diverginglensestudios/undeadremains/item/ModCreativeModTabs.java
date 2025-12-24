@@ -206,8 +206,6 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.FOSSIL_ALTAR.get());
                         pOutput.accept(ModBlocks.FOSSIL_POLISHER.get());
 
-                        pOutput.accept(ModItems.CREEPER_SAPLING_ITEM.get());
-
                         pOutput.accept(ModItems.CALIPO_SAPLING_ITEM.get());
                         pOutput.accept(ModBlocks.CALIPO_LOG.get());
                         pOutput.accept(ModBlocks.CALIPO_WOOD.get());

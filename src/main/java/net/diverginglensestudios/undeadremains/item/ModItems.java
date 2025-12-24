@@ -263,9 +263,6 @@ public class ModItems {
         public static final RegistryObject<Item> CALIPO_SAPLING_ITEM = ITEMS.register("calipo_sapling",
                         () -> new BlockItem(ModBlocks.CALIPO_SAPLING.get(), new Item.Properties()));
 
-        public static final RegistryObject<Item> CREEPER_SAPLING_ITEM = ITEMS.register("creeper_sapling",
-                        () -> new BlockItem(ModBlocks.CREEPER_SAPLING.get(), new Item.Properties()));
-
          public static final RegistryObject<Item> XANS_LEAF_SEEDS = ITEMS.register("xans_leaf_seeds",
             () -> new ItemNameBlockItem(ModBlocks.XANS_LEAVES.get(), new Item.Properties()));
 
