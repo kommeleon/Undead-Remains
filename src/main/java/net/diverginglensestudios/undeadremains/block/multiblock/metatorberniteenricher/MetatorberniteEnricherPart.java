@@ -2,18 +2,23 @@ package net.diverginglensestudios.undeadremains.block.multiblock.metatorbernitee
 
 import net.diverginglensestudios.undeadremains.block.multiblock.MultiblockHelper;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 // Part block
-public class MetatorberniteEnricherPart extends Block {
+public class MetatorberniteEnricherPart extends Block{
     public static final BooleanProperty VISIBLE = BooleanProperty.create("visible");
     public MetatorberniteEnricherPart(Properties properties) {
         super(properties);
@@ -60,4 +65,13 @@ public void onRemove(BlockState state, Level world, BlockPos pos, BlockState new
         }
     }
 }
+   public float getShadeBrightness(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+      return 1.0F;
+   }
+
+@Override
+public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+    return true; // skylight goes through
+}
+
 }

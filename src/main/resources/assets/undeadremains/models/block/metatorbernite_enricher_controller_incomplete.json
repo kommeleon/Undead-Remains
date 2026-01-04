@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "undeadremains:block/metatorbernite_enricher_controller_incomplete"
+  }
+}
