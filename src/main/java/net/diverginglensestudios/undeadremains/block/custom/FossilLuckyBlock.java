@@ -109,22 +109,27 @@ public class FossilLuckyBlock extends Block {
                     case 0 -> { // Axe
                         toolDrop = new ItemStack(ModItems.FOSSIL_AXE.get());
                         bonusDrop = new ItemStack(Items.RABBIT_FOOT);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 1 -> { // Hoe
                         toolDrop = new ItemStack(ModItems.FOSSIL_HOE.get());
                         bonusDrop = new ItemStack(Items.SLIME_BALL);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 2 -> { // Pickaxe
                         toolDrop = new ItemStack(ModItems.FOSSIL_PICKAXE.get());
                         bonusDrop = new ItemStack(Items.BLAZE_ROD);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 3 -> { // Shovel
                         toolDrop = new ItemStack(ModItems.FOSSIL_SHOVEL.get());
                         bonusDrop = new ItemStack(Items.NAUTILUS_SHELL);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 4 -> { // Sword
                         toolDrop = new ItemStack(ModItems.FOSSIL_SWORD.get());
                         bonusDrop = new ItemStack(Items.AMETHYST_SHARD);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     default -> toolDrop = ItemStack.EMPTY;
                 }
@@ -143,18 +148,22 @@ public class FossilLuckyBlock extends Block {
                     case 0 -> { // helmet
                         toolDrop = new ItemStack(ModItems.FOSSIL_HELMET.get());
                         bonusDrop = new ItemStack(Items.LIGHTNING_ROD);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 1 -> { // chestplate
                         toolDrop = new ItemStack(ModItems.FOSSIL_CHESTPLATE.get());
                         bonusDrop = new ItemStack(Items.CLOCK);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 2 -> { // leggings
                         toolDrop = new ItemStack(ModItems.FOSSIL_LEGGINGS.get());
                         bonusDrop = new ItemStack(Items.SCUTE);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     case 3 -> { // boots
                         toolDrop = new ItemStack(ModItems.FOSSIL_BOOTS.get());
                         bonusDrop = new ItemStack(Items.ECHO_SHARD);
+                        bonusDrop = new ItemStack(ModItems.FOSSIL.get());
                     }
                     default -> toolDrop = ItemStack.EMPTY;
                 }

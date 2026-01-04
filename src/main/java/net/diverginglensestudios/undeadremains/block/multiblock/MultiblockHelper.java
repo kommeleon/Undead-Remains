@@ -3,6 +3,7 @@ package net.diverginglensestudios.undeadremains.block.multiblock;
 import net.diverginglensestudios.undeadremains.block.multiblock.metatorberniteenricher.MetatorberniteEnricherPart;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class MultiblockHelper {
     public static boolean isMetatorberniteEnricherComplete(Level level, BlockPos center) {
@@ -22,4 +23,5 @@ public class MultiblockHelper {
         }
         return true;
     }
+
 }

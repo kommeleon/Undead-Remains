@@ -431,7 +431,7 @@ public static final RegistryObject<Block> METATORBERNITE_ENRICHER_CONTROLLER = B
 
 public static final RegistryObject<Block> METATORBERNITE_ENRICHER_PART = BLOCKS.register(
     "metatorbernite_enricher_part",
-    () -> new MetatorberniteEnricherPart(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK))
+    () -> new MetatorberniteEnricherPart(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion())
 );
         ////////////////////BLOCKS////////////////////
 

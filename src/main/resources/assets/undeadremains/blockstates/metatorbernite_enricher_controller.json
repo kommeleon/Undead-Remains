@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "complete=false": { "model": "undeadremains:block/metatorbernite_enricher_controller_incomplete" },
+    "complete=true": { "model": "undeadremains:block/metatorbernite_enricher_controller_complete" }
+  }
+}

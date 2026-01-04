@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "visible=true": { "model": "undeadremains:block/metatorbernite_enricher_part" },
+    "visible=false": { "model": "undeadremains:block/metatorbernite_enricher_part_invisible" }
+  }
+}
