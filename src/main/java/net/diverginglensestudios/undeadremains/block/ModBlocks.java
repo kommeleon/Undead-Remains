@@ -9,9 +9,12 @@ package net.diverginglensestudios.undeadremains.block;
 
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.block.custom.*;
+import net.diverginglensestudios.undeadremains.block.multiblock.metatorberniteenricher.MetatorberniteEnricherController;
+import net.diverginglensestudios.undeadremains.block.multiblock.metatorberniteenricher.MetatorberniteEnricherPart;
 import net.diverginglensestudios.undeadremains.item.ModItems;
 import net.diverginglensestudios.undeadremains.util.ModWoodTypes;
 import net.diverginglensestudios.undeadremains.worldgen.tree.*;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -421,6 +424,15 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission(),
                                         ModBlocks.LIVING_LANGSTONE, false));
 
+public static final RegistryObject<Block> METATORBERNITE_ENRICHER_CONTROLLER = BLOCKS.register(
+    "metatorbernite_enricher_controller",
+    () -> new MetatorberniteEnricherController(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK))
+);
+
+public static final RegistryObject<Block> METATORBERNITE_ENRICHER_PART = BLOCKS.register(
+    "metatorbernite_enricher_part",
+    () -> new MetatorberniteEnricherPart(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK))
+);
         ////////////////////BLOCKS////////////////////
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
