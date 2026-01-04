@@ -60,17 +60,19 @@ public class ModItems {
 
         // Food Items
         public static final RegistryObject<Item> THE_FOSSILS_EYE = ITEMS.register("the_fossils_eye",
-                        () -> new Item(new Item.Properties().food(ModFoods.THE_FOSSILS_EYE)));
+                        () -> new ModTooltipItem(new Item.Properties().food(ModFoods.THE_FOSSILS_EYE), "tooltip.undeadremains.the_fossils_eye"));
+
         public static final RegistryObject<Item> THE_QUARTZ_MODIFIED_FOSSILS_EYE = ITEMS.register(
                         "the_quartz_modified_fossils_eye",
-                        () -> new Item(new Item.Properties().food(ModFoods.THE_QUARTZ_MODIFIED_FOSSILS_EYE)));
+                        () -> new ModTooltipItem(new Item.Properties().food(ModFoods.THE_QUARTZ_MODIFIED_FOSSILS_EYE), "tooltip.undeadremains.the_quartz_modified_fossils_eye"));
+
         public static final RegistryObject<Item> FOSSILIZED_DRUMSTICK = ITEMS.register("fossilized_drumstick",
                         () -> new ModFoodItem(new Item.Properties().food(ModFoods.FOSSILIZED_DRUMSTICK), 200));
+
         public static final RegistryObject<Item> GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK = ITEMS.register(
                         "gold_block_modified_fossilized_drumstick",
-                        () -> new ModFoodItem(
-                                        new Item.Properties().food(ModFoods.GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK),
-                                        200));
+                        () -> new ModFoodItem(new Item.Properties().food(ModFoods.GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK),200));
+
         public static final RegistryObject<Item> RAW_XANARIAN_MEAT = ITEMS.register("raw_xanarian_meat",
                         () -> new Item(new Item.Properties().food(ModFoods.RAW_XANARIAN_MEAT)));
 

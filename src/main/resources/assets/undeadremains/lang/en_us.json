@@ -265,6 +265,9 @@
   "item.minecraft.lingering.effect.fossilized_heart_potion": "Lingering Potion of Fossilized Heart",
   "effect.undeadremains.fossilzed_hearth": "Lingering Potion of Fossilized Heart",
 
+  "tooltip.undeadremains.the_fossils_eye":"Gives Night Vision",
+  "tooltip.undeadremains.the_quartz_modified_fossils_eye":"Counteracts Darkness Effect",
+
   "creativetab.tutorial_tab": "Undead Remains"
 
   
