@@ -24,6 +24,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<FossilPolishingStationMenu>> GEM_POLISHING_MENU =
             registerMenuType("gem_polishing_menu", FossilPolishingStationMenu::new);
 
+    public static final RegistryObject<MenuType<MetatorberniteEnricherMenu>> METATORBERNITE_ENRICHER_MENU =
+            registerMenuType("metatorbernite_enricher_menu", MetatorberniteEnricherMenu::new);
+
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
