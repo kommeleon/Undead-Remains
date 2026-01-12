@@ -39,12 +39,14 @@ public class MetatorberniteEnricherController extends BaseEntityBlock {
 public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
     if (!world.isClientSide()) {
         updateMultiblockState(pos, world);
+        if (MultiblockHelper.isMetatorberniteEnricherComplete(world, pos)) {
         BlockEntity entity = world.getBlockEntity(pos);
             if(entity instanceof MetatorberniteEnricherBlockEntity) {
                 NetworkHooks.openScreen(((ServerPlayer)player), (MetatorberniteEnricherBlockEntity)entity, pos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
+        }
     }
 
     return InteractionResult.sidedSuccess(world.isClientSide());
