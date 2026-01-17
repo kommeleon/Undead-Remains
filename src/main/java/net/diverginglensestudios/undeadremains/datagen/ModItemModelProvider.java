@@ -111,6 +111,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.POLISHED_DEEP_LANGSTONE_WALL, ModBlocks.POLISHED_DEEP_LANGSTONE);
         // Weirdly_shaped_blocks
         evenSimplerBlockItem(ModBlocks.FOSSIL_STAIRS);
+        evenSimplerBlockItem(ModBlocks.METATORBERNITE_ENRICHER_CONTROLLER);
+        evenSimplerBlockItem(ModBlocks.METATORBERNITE_ENRICHER_PART);
         evenSimplerBlockItem(ModBlocks.FOSSIL_SLAB);
         evenSimplerBlockItem(ModBlocks.FOSSIL_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.FOSSIL_FENCE_GATE);
