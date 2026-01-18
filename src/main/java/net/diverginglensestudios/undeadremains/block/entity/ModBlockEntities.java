@@ -32,6 +32,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.<FossilPolishingStationBlockEntity>of(FossilPolishingStationBlockEntity::new,
                             ModBlocks.FOSSIL_POLISHER.get()).build(null));
 
+public static final RegistryObject<BlockEntityType<XanarianGatewayBlockEntity>> XANARIAN_GATEWAY_BE =
+            BLOCK_ENTITIES.register("xanarian_gateway_be", () ->
+                    BlockEntityType.Builder.<XanarianGatewayBlockEntity>of(XanarianGatewayBlockEntity::new,
+                            ModBlocks.FOSSIL_ALTAR.get()).build(null));
+
 
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
             BLOCK_ENTITIES.register("mod_sign", () ->

@@ -35,6 +35,8 @@ import net.diverginglensestudios.undeadremains.recipe.ModRecipes;
 import net.diverginglensestudios.undeadremains.screen.GemPolishingStationScreen;
 import net.diverginglensestudios.undeadremains.screen.MetatorberniteEnricherScreen;
 import net.diverginglensestudios.undeadremains.screen.ModMenuTypes;
+import net.diverginglensestudios.undeadremains.screen.XanarianGatewayMenu;
+import net.diverginglensestudios.undeadremains.screen.XanarianGatewayScreen;
 import net.diverginglensestudios.undeadremains.sound.ModSounds;
 import net.diverginglensestudios.undeadremains.util.BetterBrewingRecipe;
 import net.diverginglensestudios.undeadremains.util.ModWoodTypes;
@@ -185,6 +187,7 @@ public class UndeadRemains { // Define the Class for the Mod
                         EntityRenderers.register(ModEntities.METATORBERNITE_GRENADE_PROJECTILE.get(),
                                         ThrownItemRenderer::new);
                         MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
+                        MenuScreens.register(ModMenuTypes.XANARIAN_GATEWAY_MENU.get(), XanarianGatewayScreen::new);
                         MenuScreens.register(ModMenuTypes.METATORBERNITE_ENRICHER_MENU.get(), MetatorberniteEnricherScreen::new);
                 }
 

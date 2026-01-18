@@ -12,6 +12,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.diverginglensestudios.undeadremains.block.ModBlocks;
+import net.diverginglensestudios.undeadremains.block.entity.FossilPolishingStationBlockEntity;
+import net.diverginglensestudios.undeadremains.block.entity.ModBlockEntities;
+import net.diverginglensestudios.undeadremains.block.entity.XanarianGatewayBlockEntity;
 import net.diverginglensestudios.undeadremains.worldgen.dimension.ModDimensions;
 import net.diverginglensestudios.undeadremains.worldgen.portal.ModFossilTeleporter;
 import net.minecraft.core.BlockPos;
@@ -27,14 +30,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.network.NetworkHooks;
 
-public class FossilAltarBlock extends Block{
+public class FossilAltarBlock extends BaseEntityBlock{
     public FossilAltarBlock(Properties pProperties) {
         super(pProperties);
     }
@@ -61,9 +69,18 @@ public class FossilAltarBlock extends Block{
 
                 // Check if the player is standing on top of this altar block
                 if (!playerPos.below().equals(clickedPos)) {
-                    serverPlayer.displayClientMessage(Component.literal("Please stand on the teleporter"), true);
-                    return InteractionResult.SUCCESS;
+                    if  (!level.isClientSide()) {
+                BlockEntity entity = level.getBlockEntity(clickedPos);
+                if(entity instanceof XanarianGatewayBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer)player), (XanarianGatewayBlockEntity)entity, clickedPos);
+                } else {
+                throw new IllegalStateException("Our Container provider is missing!");
+                    }
                 }
+                serverPlayer.displayClientMessage(Component.literal("Stand on the teleporter to teleport"), true);
+                return InteractionResult.SUCCESS;
+                }
+                
 
                 // Determine target dimension
                 MinecraftServer server = serverPlayer.getServer();
@@ -86,50 +103,21 @@ public class FossilAltarBlock extends Block{
         }
         return InteractionResult.CONSUME;
     }
-}
 
-// public class FossilAltarBlock extends Block {
-// public FossilAltarBlock(Properties pProperties) {
-// super(pProperties);
-// }
-// public static final VoxelShape SHAPE = Block.box(1, 0, 3, 15, 16, 13);
-//
-// @Override
-// public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos
-// pPos, CollisionContext pContext) {
-// return SHAPE;
-// }
-//
-// @Override
-// public RenderShape getRenderShape(BlockState pState) {
-// return RenderShape.MODEL;
-// }
-//
-// @Override
-// public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-// Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-// if (pPlayer.canChangeDimensions()) {
-// handleTestPortal(pPlayer, pPos);
-// return InteractionResult.SUCCESS;
-// } else {
-// return InteractionResult.CONSUME;
-// }
-// }
-//
-// private void handleTestPortal(Entity player, BlockPos pPos) {
-// if (player.level() instanceof ServerLevel serverlevel) {
-// MinecraftServer minecraftserver = serverlevel.getServer();
-// ResourceKey<Level> resourcekey = player.level().dimension() ==
-// ModDimensions.FOSSILDIM_LEVEL_KEY ?
-// Level.OVERWORLD : ModDimensions.FOSSILDIM_LEVEL_KEY;
-// ServerLevel portalDimension = minecraftserver.getLevel(resourcekey);
-// if (portalDimension != null && !player.isPassenger()) {
-// if(resourcekey == ModDimensions.FOSSILDIM_LEVEL_KEY) {
-// player.changeDimension(portalDimension, new ModFossilTeleporter(pPos));
-// } else {
-// player.changeDimension(portalDimension, new ModFossilTeleporter(pPos));
-// }
-// }
-// }
-// }
-// }
+    @Override
+    @Nullable
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return new XanarianGatewayBlockEntity(pPos, pState);
+    }
+@Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        if(pLevel.isClientSide()) {
+            return null;
+        }
+
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.XANARIAN_GATEWAY_BE.get(),
+                (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+                
+    }
+}
