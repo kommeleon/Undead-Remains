@@ -204,6 +204,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.SUPREME_KNIGHT_SPAWN_EGG.get());
 
                         pOutput.accept(ModBlocks.FOSSIL_ALTAR.get());
+                        pOutput.accept(ModItems.METATORBERNITE_ENRICHER_CONTROLLER_ITEM.get());
+                        pOutput.accept(ModItems.METATORBERNITE_ENRICHER_PART_ITEM.get());
+                        pOutput.accept(ModBlocks.FOSSIL_ALTAR.get());
                         pOutput.accept(ModBlocks.FOSSIL_POLISHER.get());
 
                         pOutput.accept(ModItems.CALIPO_SAPLING_ITEM.get());

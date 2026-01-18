@@ -1,3 +1,9 @@
+/***********************************************************/
+/*       This file is part of the UndeadRemains Mod        */
+/*      which is maintained by DivergingLense Studios      */
+/*          and is published under the MIT License         */
+/* https://github.com/DivergingLenseStudios/Undead-Remains */
+/***********************************************************/
 package net.diverginglensestudios.undeadremains.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
