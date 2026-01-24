@@ -8,6 +8,7 @@
 package net.diverginglensestudios.undeadremains.datagen;
 
 import net.diverginglensestudios.undeadremains.datagen.loot.ModBlockLootTables;
+import net.diverginglensestudios.undeadremains.datagen.loot.ModChestLootTables;
 import net.diverginglensestudios.undeadremains.datagen.loot.ModEntityLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -20,7 +21,7 @@ public class ModLootTableProvider {
     public static LootTableProvider create(PackOutput output) {
         return new LootTableProvider(output, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK),
-                new LootTableProvider.SubProviderEntry(ModEntityLootTables::new, LootContextParamSets.ENTITY)
-        ));
+                new LootTableProvider.SubProviderEntry(ModEntityLootTables::new, LootContextParamSets.ENTITY),
+                new LootTableProvider.SubProviderEntry(ModChestLootTables::new, LootContextParamSets.CHEST)));
     }
 }
