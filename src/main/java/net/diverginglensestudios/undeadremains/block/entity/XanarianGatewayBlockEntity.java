@@ -60,7 +60,8 @@ public class XanarianGatewayBlockEntity extends BlockEntity implements MenuProvi
 	protected final ContainerData data;
 	private int progress = 0;
 	private int maxProgress = 78;
-	public int charge = 0;
+	private int charge = 0;
+    private int maxCharge = 4;
 
     public XanarianGatewayBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.XANARIAN_GATEWAY_BE.get(), pPos, pBlockState);
@@ -70,23 +71,25 @@ public class XanarianGatewayBlockEntity extends BlockEntity implements MenuProvi
                 return switch (pIndex) {
                     case 0 -> XanarianGatewayBlockEntity.this.progress;
                     case 1 -> XanarianGatewayBlockEntity.this.maxProgress;
+                    case 2 -> XanarianGatewayBlockEntity.this.charge;
+                    case 3 -> XanarianGatewayBlockEntity.this.maxCharge;
                     default -> 0;
                 };
             }
-
-
 
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
                     case 0 -> XanarianGatewayBlockEntity.this.progress = pValue;
                     case 1 -> XanarianGatewayBlockEntity.this.maxProgress = pValue;
+                    case 2 -> XanarianGatewayBlockEntity.this.charge = pValue;
+                    case 3 -> XanarianGatewayBlockEntity.this.maxCharge = pValue;
                 }
             }
 
             @Override
             public int getCount() {
-                return 2;
+                return 4;
             }
         };
     }
