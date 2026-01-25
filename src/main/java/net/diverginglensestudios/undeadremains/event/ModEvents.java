@@ -16,8 +16,11 @@ import net.diverginglensestudios.undeadremains.entity.custom.Zombies.SmallWoodli
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.StrayZombieEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.TreeZombieEntity;
 import net.diverginglensestudios.undeadremains.item.ModItems;
+import net.diverginglensestudios.undeadremains.xanarianreputation.PlayerXanarianReputation;
+import net.diverginglensestudios.undeadremains.xanarianreputation.PlayerXanarianReputationProvider;
 import net.minecraft.core.BlockPos;
 // Import Minecraft and Forge Elements
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -29,6 +32,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -41,10 +45,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -198,6 +205,28 @@ public class ModEvents {
         if (entity.hasEffect(ModEffects.FOSSILIZED_HEART.get())) {
             event.setCanceled(true);
         }
+    }
+    @SubscribeEvent
+    public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
+        if(event.getObject() instanceof Player) {
+            if(!event.getObject().getCapability(PlayerXanarianReputationProvider.PLAYER_XANARIAN_REPUTATION).isPresent()) {
+                event.addCapability(new ResourceLocation(UndeadRemains.MOD_ID, "properties"), new PlayerXanarianReputationProvider());
+            }
+        }
+    }
+    @SubscribeEvent
+    public static void onPlayerCloned(PlayerEvent.Clone event) {
+        if(event.isWasDeath()) {
+            event.getOriginal().getCapability(PlayerXanarianReputationProvider.PLAYER_XANARIAN_REPUTATION).ifPresent(oldStore -> {
+                event.getOriginal().getCapability(PlayerXanarianReputationProvider.PLAYER_XANARIAN_REPUTATION).ifPresent(newStore -> {
+                    newStore.copyFrom(oldStore);
+                });
+            });
+        }
+    }
+    @SubscribeEvent
+    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
+        event.register(PlayerXanarianReputation.class);
     }
 
 }
