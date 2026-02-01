@@ -19,8 +19,8 @@ import net.diverginglensestudios.undeadremains.entity.custom.Zombies.StrayZombie
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.TreeZombieEntity;
 import net.diverginglensestudios.undeadremains.item.ModItems;
 import net.diverginglensestudios.undeadremains.worldgen.dimension.ModDimensions;
-import net.diverginglensestudios.undeadremains.xanarianreputation.PlayerXanarianReputation;
-import net.diverginglensestudios.undeadremains.xanarianreputation.PlayerXanarianReputationProvider;
+import net.diverginglensestudios.undeadremains.playerData.xanarianreputation.PlayerXanarianReputation;
+import net.diverginglensestudios.undeadremains.playerData.xanarianreputation.PlayerXanarianReputationProvider;
 import net.minecraft.core.BlockPos;
 // Import Minecraft and Forge Elements
 import net.minecraft.resources.ResourceLocation;

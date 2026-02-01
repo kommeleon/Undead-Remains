@@ -5,7 +5,7 @@
 /* https://github.com/DivergingLenseStudios/Undead-Remains */
 /***********************************************************/
 
-package net.diverginglensestudios.undeadremains.xanarianreputation;
+package net.diverginglensestudios.undeadremains.playerData.xanarianreputation;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;

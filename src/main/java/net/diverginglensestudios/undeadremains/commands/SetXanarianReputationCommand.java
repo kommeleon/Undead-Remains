@@ -9,7 +9,7 @@ package net.diverginglensestudios.undeadremains.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import net.diverginglensestudios.undeadremains.xanarianreputation.PlayerXanarianReputationProvider;
+import net.diverginglensestudios.undeadremains.playerData.xanarianreputation.PlayerXanarianReputationProvider;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
