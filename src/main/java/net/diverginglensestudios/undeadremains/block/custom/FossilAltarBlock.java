@@ -84,7 +84,7 @@ public class FossilAltarBlock extends BaseEntityBlock{
 
             if (!gateway.canTeleport()) {
                 serverPlayer.displayClientMessage(
-                        Component.literal("The altar has no remaining charge"), true);
+                        Component.literal("The gateway has no remaining charge"), true);
                 return InteractionResult.SUCCESS;
             }
 
