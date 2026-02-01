@@ -7,6 +7,7 @@
 
 package net.diverginglensestudios.undeadremains.playerData.xanarianreputation;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -45,15 +46,24 @@ public class PlayerXanarianReputation {
     }
     private void onReputationChanged(ServerPlayer player, int oldValue, int newValue) {
         int delta = newValue - oldValue;
-        if (newValue <= -20){
-            player.displayClientMessage(Component.literal("Xanarian Reputation is now " + this.getXanarianReputation() + ". (Bad)"),true);
+        if (newValue <= -20) {
+            player.displayClientMessage(
+                    Component.literal("Xanarian Reputation is now " + newValue + ". ")
+                            .append(Component.literal("(Bad)").withStyle(ChatFormatting.RED)),
+                    true
+            );
+        } else if (newValue < 50) {
+            player.displayClientMessage(
+                    Component.literal("Xanarian Reputation is now " + newValue + ". ")
+                            .append(Component.literal("(Neutral)").withStyle(ChatFormatting.YELLOW)),
+                    true
+            );
+        } else {
+            player.displayClientMessage(
+                    Component.literal("Xanarian Reputation is now " + newValue + ". ")
+                            .append(Component.literal("(Good)").withStyle(ChatFormatting.GREEN)),
+                    true
+            );
         }
-        else if (newValue > -20 && newValue < 50){
-            player.displayClientMessage(Component.literal("Xanarian Reputation is now " + this.getXanarianReputation() + ". (Neutral)"),true);
-        }
-        else if (newValue >= 50) {
-            player.displayClientMessage(Component.literal("Xanarian Reputation is now " + this.getXanarianReputation() + ". (Good)"),true);
-        }
-
     }
 }
