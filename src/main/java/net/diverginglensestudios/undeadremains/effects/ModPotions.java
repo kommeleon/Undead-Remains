@@ -16,14 +16,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModPotions {
-    public static final DeferredRegister<Potion> POTIONS
-            = DeferredRegister.create(ForgeRegistries.POTIONS, UndeadRemains.MOD_ID);
+	public static final DeferredRegister<Potion> POTIONS
+			= DeferredRegister.create(ForgeRegistries.POTIONS, UndeadRemains.MOD_ID);
 
-    public static final RegistryObject<Potion> FOSSILIZED_HEART_POTION = POTIONS.register("fossilized_heart_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.FOSSILIZED_HEART.get(), 200, 0)));
+	public static final RegistryObject<Potion> FOSSILIZED_HEART_POTION = POTIONS.register("fossilized_heart_potion",
+			() -> new Potion(new MobEffectInstance(ModEffects.FOSSILIZED_HEART.get(), 200, 0)));
 
 
-    public static void register(IEventBus eventBus) {
-        POTIONS.register(eventBus);
-    }
+	public static void register(IEventBus eventBus) {
+		POTIONS.register(eventBus);
+	}
 }
