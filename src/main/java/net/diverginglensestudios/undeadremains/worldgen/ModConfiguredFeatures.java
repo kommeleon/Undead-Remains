@@ -39,6 +39,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
+
 public class ModConfiguredFeatures {
 	//Keys
 	public static final ResourceKey<ConfiguredFeature<?,?>> OVERWORLD_FOSSIL_ORE_KEY = registerKey("fossil_ore");
