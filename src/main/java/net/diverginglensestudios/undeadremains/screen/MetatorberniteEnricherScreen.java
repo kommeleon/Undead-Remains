@@ -2,7 +2,7 @@
 /*       This file is part of the UndeadRemains Mod        */
 /*      which is maintained by DivergingLense Studios      */
 /*          and is published under the MIT License         */
-/* https://github.com/DivergingLenseStudios/Undead-Remains */
+/* https://github.com/DiasvergingLenseStudios/Undead-Remains */
 /***********************************************************/
 package net.diverginglensestudios.undeadremains.screen;
 

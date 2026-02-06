@@ -36,11 +36,12 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 public class MetatorberniteEnricherBlockEntity extends BlockEntity implements MenuProvider {
-	private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+	private final ItemStackHandler itemHandler = new ItemStackHandler(4);
 
 	private static final int FUEL_CELL_SLOT = 0;
 	private static final int METATORBERNITE_SLOT = 1;
 	private static final int OUTPUT_SLOT = 2;
+	private static final int RARE_FOSSIL_SLOT = 3;
 
 	private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -159,13 +160,17 @@ public class MetatorberniteEnricherBlockEntity extends BlockEntity implements Me
 		ItemStack result = new ItemStack(ModItems.METATURBONITE.get(), 1);
 		this.itemHandler.extractItem(FUEL_CELL_SLOT, 1, false);
 		this.itemHandler.extractItem(METATORBERNITE_SLOT, 1, false);
+		this.itemHandler.extractItem(RARE_FOSSIL_SLOT, 1, false);
 
 		this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
 				this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
 	}
 
 	private boolean hasRecipe() {
-		boolean hasCraftingItem = this.itemHandler.getStackInSlot(FUEL_CELL_SLOT).getItem() == ModItems.EMPTY_FUEL_CELL.get() && this.itemHandler.getStackInSlot(METATORBERNITE_SLOT).getItem() == ModItems.METATORBERNITE.get() ;
+		boolean hasCraftingItem =
+				this.itemHandler.getStackInSlot(FUEL_CELL_SLOT).getItem() == ModItems.EMPTY_FUEL_CELL.get()
+				&& this.itemHandler.getStackInSlot(METATORBERNITE_SLOT).getItem() == ModItems.METATORBERNITE.get()
+				&& this.itemHandler.getStackInSlot(RARE_FOSSIL_SLOT).getItem() == ModItems.RARE_FOSSIL.get();
 		ItemStack result = new ItemStack(ModItems.METATURBONITE.get());
 
 		return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());

@@ -29,12 +29,12 @@ public class MetatorberniteEnricherMenu extends AbstractContainerMenu{
 	private final ContainerData data;
 
 	public MetatorberniteEnricherMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-		this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
+		this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
 	}
 
 	public MetatorberniteEnricherMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
 		super(ModMenuTypes.METATORBERNITE_ENRICHER_MENU.get(), pContainerId);
-		checkContainerSize(inv, 3);
+		checkContainerSize(inv, 4);
 		blockEntity = ((MetatorberniteEnricherBlockEntity) entity);
 		this.level = inv.player.level();
 		this.data = data;
@@ -46,6 +46,7 @@ public class MetatorberniteEnricherMenu extends AbstractContainerMenu{
 			this.addSlot(new SlotItemHandler(iItemHandler, 0, 68, 11));//Slot for fuel cell
 			this.addSlot(new SlotItemHandler(iItemHandler, 1, 92, 11 ));//Slot for metatorbernite
 			this.addSlot(new SlotItemHandler(iItemHandler, 2, 80, 59 ));//output slot
+			this.addSlot(new SlotItemHandler(iItemHandler, 3, 50, 11));//Slot for rare fossil
 		});
 
 		addDataSlots(data);
@@ -79,7 +80,7 @@ public class MetatorberniteEnricherMenu extends AbstractContainerMenu{
 	private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
 	// THIS YOU HAVE TO DEFINE!
-	private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+	private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int pIndex) {
 		Slot sourceSlot = slots.get(pIndex);
