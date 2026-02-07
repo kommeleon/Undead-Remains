@@ -43,10 +43,10 @@ public class MetatorberniteEnricherMenu extends AbstractContainerMenu{
 		addPlayerHotbar(inv);
 
 		this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-			this.addSlot(new SlotItemHandler(iItemHandler, 0, 68, 11));//Slot for fuel cell
-			this.addSlot(new SlotItemHandler(iItemHandler, 1, 92, 11 ));//Slot for metatorbernite
+			this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 11));//Slot for fuel cell
+			this.addSlot(new SlotItemHandler(iItemHandler, 1, 110, 26 ));//Slot for metatorbernite
 			this.addSlot(new SlotItemHandler(iItemHandler, 2, 80, 59 ));//output slot
-			this.addSlot(new SlotItemHandler(iItemHandler, 3, 50, 11));//Slot for rare fossil
+			this.addSlot(new SlotItemHandler(iItemHandler, 3, 50, 26));//Slot for rare fossil
 		});
 
 		addDataSlots(data);

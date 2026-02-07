@@ -46,11 +46,23 @@ public class MetatorberniteEnricherScreen extends AbstractContainerScreen<Metato
 		guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
 		renderProgressArrow(guiGraphics, x, y);
+		renderLeftFuelArrow(guiGraphics, x, y);
+		renderRightFuelArrow(guiGraphics, x, y);
 	}
 
 	private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
 		if(menu.isCrafting()) {
-			guiGraphics.blit(TEXTURE, x + 85, y + 30, 176, 0, 8, menu.getScaledProgress());
+			guiGraphics.blit(TEXTURE, x + 84, y + 30, 176, 0, 8, menu.getScaledProgress());
+		}
+	}
+	private void renderLeftFuelArrow(GuiGraphics guiGraphics, int x, int y) {
+		if(menu.isCrafting()) {
+			guiGraphics.blit(TEXTURE, x + 46, y + 44, 184, 0, 30, menu.getScaledProgress());
+		}
+	}
+	private void renderRightFuelArrow(GuiGraphics guiGraphics, int x, int y) {
+		if(menu.isCrafting()) {
+			guiGraphics.blit(TEXTURE, x + 99, y + 44, 214, 0, 30, menu.getScaledProgress());
 		}
 	}
 

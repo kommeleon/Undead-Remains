@@ -48,8 +48,8 @@ public class XanarianGatewayScreen extends AbstractContainerScreen<XanarianGatew
 
 	private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
 		if (menu.isCrafting()) {
-			guiGraphics.blit(TEXTURE, x + 58, y + 36,	// screen position
-				176, 0,				 // texture UV
+			guiGraphics.blit(TEXTURE, x + 58, y + 36   // screen position
+				,176, 0,				 // texture UV
 				8, menu.getScaledProgress());	// width, height
 		}
 	}
