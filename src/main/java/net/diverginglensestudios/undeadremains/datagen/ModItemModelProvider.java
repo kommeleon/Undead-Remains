@@ -210,6 +210,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		withExistingParent(ModItems.BIG_WOODLING_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		withExistingParent(ModItems.STRAY_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		withExistingParent(ModItems.XANARIAN_CANNIBAL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+		withExistingParent(ModItems.XANARANHA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 	}
 
 	// Shoutout to El_Redstoniano for making this

@@ -338,6 +338,11 @@ public class ModItems {
 			() -> new ForgeSpawnEggItem(ModEntities.XANARIAN_CANNIBAL, 0x394061, 0x394061,
 					new Item.Properties()));
 
+	public static final RegistryObject<Item> XANARANHA_SPAWN_EGG = ITEMS.register(
+			"xanaramha_spawn_egg",
+			() -> new ForgeSpawnEggItem(ModEntities.XANARANHA, 0x303e39, 0x4f0937,
+					new Item.Properties()));
+
 	// Signs
 	public static final RegistryObject<Item> ASH_SIGN = ITEMS.register("ash_sign",
 			() -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ASH_SIGN.get(),
