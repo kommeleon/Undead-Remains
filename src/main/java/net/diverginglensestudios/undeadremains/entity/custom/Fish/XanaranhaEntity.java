@@ -10,6 +10,7 @@ package net.diverginglensestudios.undeadremains.entity.custom.Fish;
 import javax.annotation.Nullable;
 
 import net.diverginglensestudios.undeadremains.entity.ai.EntityAINearestTarget3D;
+import net.diverginglensestudios.undeadremains.entity.ai.XanaranhaAttackGoal;
 import net.diverginglensestudios.undeadremains.entity.custom.Xanarians.AbstractXanarian;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -82,7 +83,7 @@ public class XanaranhaEntity extends AbstractFish {
 		this.targetSelector.addGoal(2, new EntityAINearestTarget3D<>(this, AbstractXanarian.class, true));
 		this.targetSelector.addGoal(2, new EntityAINearestTarget3D<>(this, Creeper.class, true));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this, XanaranhaEntity.class));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 3D, true));
+		this.goalSelector.addGoal(2, new XanaranhaAttackGoal(this, 3D, true));
 		this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1D, 10));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
