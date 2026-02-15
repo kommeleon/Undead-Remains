@@ -15,8 +15,8 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
 public class XanaranhaAttackGoal extends MeleeAttackGoal {
 	private final XanaranhaEntity entity;
-	private int attackDelay = 4;
-	private int ticksUntilNextAttack = 1;
+	private int attackDelay = 8;
+	private int ticksUntilNextAttack = 2;
 	private boolean shouldCountTillNextAttack = false;
 
 	public XanaranhaAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
@@ -27,8 +27,8 @@ public class XanaranhaAttackGoal extends MeleeAttackGoal {
 	@Override
 	public void start() {
 		super.start();
-		attackDelay = 4;
-		ticksUntilNextAttack = 1;
+		attackDelay = 8;
+		ticksUntilNextAttack = 2;
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class XanaranhaAttackGoal extends MeleeAttackGoal {
 	}
 
 	protected void resetAttackCooldown() {
-		this.ticksUntilNextAttack = this.adjustedTickDelay(6);
+		this.ticksUntilNextAttack = this.adjustedTickDelay(11);
 	}
 
 	protected boolean isTimeToAttack() {

@@ -82,7 +82,7 @@ public class XanaranhaModel<T extends Entity> extends HierarchicalModel<T> {
 			f1 = 1.7F;
 		}
 		this.tail.yRot = -f * 0.25F * Mth.sin(f1 * 0.6F * pAgeInTicks);
-		this.animate(((XanaranhaEntity) pEntity).attackAnimationState, ModFishAnimations.XANARANHA_ATTACK, pAgeInTicks, 1f);
+		//this.animate(((XanaranhaEntity) pEntity).attackAnimationState, ModFishAnimations.XANARANHA_ATTACK, pAgeInTicks, 1f);
 
 	}
 

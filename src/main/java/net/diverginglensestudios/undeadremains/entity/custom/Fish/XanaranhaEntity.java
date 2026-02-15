@@ -46,6 +46,8 @@ public class XanaranhaEntity extends AbstractFish {
 	public final AnimationState idleAnimationState = new AnimationState();
 	private int idleAnimationTimeout = 0;
 
+	public final AnimationState attackAnimationState = new AnimationState();
+	public int attackAnimationTimeout = 0;
 
 	@Override
 	public void tick() {
@@ -61,6 +63,17 @@ public class XanaranhaEntity extends AbstractFish {
 			this.idleAnimationState.start(this.tickCount);
 		} else {
 			--this.idleAnimationTimeout;
+		}
+
+		if(this.isAttacking() && attackAnimationTimeout <= 0) {
+			attackAnimationTimeout = 11; // Length in ticks of your animation
+			attackAnimationState.start(this.tickCount);
+		} else {
+			--this.attackAnimationTimeout;
+		}
+
+		if(!this.isAttacking()) {
+			attackAnimationState.stop();
 		}
 	}
 
@@ -90,9 +103,6 @@ public class XanaranhaEntity extends AbstractFish {
 	}
 
 
-	public final AnimationState attackAnimationState = new AnimationState();
-	public int attackAnimationTimeout = 0;
-
 
 	public void setAttacking(boolean attacking) {
 		this.entityData.set(ATTACKING, attacking);
@@ -117,6 +127,7 @@ public class XanaranhaEntity extends AbstractFish {
 				.add(ForgeMod.SWIM_SPEED.get(),2.0D)
 				.add(Attributes.ARMOR, 2.0D);
 	}
+
 
 	@Nullable
 	@Override
