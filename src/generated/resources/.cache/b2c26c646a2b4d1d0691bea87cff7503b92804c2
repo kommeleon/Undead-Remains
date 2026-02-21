@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-13T13:18:18.4609369	Item Models: undeadremains
+// 1.20.1	2026-02-21T18:25:34.7009178	Item Models: undeadremains
 2ab9beff061ae44e53920d54046f6ff3a3d6904a assets/undeadremains/models/item/amethyst_modified_fossil_sword.json
 dbef713152a3abb4439f879d96f5829998a2d16a assets/undeadremains/models/item/ash_boat.json
 966ddf2d5590b696a89ba29b85f4a8ab5382db6d assets/undeadremains/models/item/ash_button.json
@@ -359,6 +359,7 @@ a82a4dff131754fb222e5df5d333f3d00577e79f assets/undeadremains/models/item/rare_f
 e8d33a18232d2c06eb7a9d5dd66249082a29f712 assets/undeadremains/models/item/raw_deepslate_fossil.json
 72c895052feced7cc786ecf07da6674125a95af4 assets/undeadremains/models/item/raw_fossil.json
 00e30451ee06220c218c5843acf08939ea14fb99 assets/undeadremains/models/item/raw_langrite.json
+d9212d21a396d0fc1fc6d8c211fc6088aad51b45 assets/undeadremains/models/item/raw_xanaranha.json
 587913a521184c214943c9e9cd10de0372c32e23 assets/undeadremains/models/item/raw_xanarian_meat.json
 46b997e09b1d26d93c7f7ac3de7bfb93700fa1ce assets/undeadremains/models/item/sculk_shard_modified_fossil_boots.json
 5eee802d42518237507b53d8475e29b5a30bba8b assets/undeadremains/models/item/sculk_shard_modified_fossil_boots_amethyst_trim.json

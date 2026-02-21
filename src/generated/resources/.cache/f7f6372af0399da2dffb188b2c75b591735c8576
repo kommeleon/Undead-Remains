@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-07T13:05:49.7103281	Tags for minecraft:item mod id undeadremains
+// 1.20.1	2026-02-21T18:25:34.7080409	Tags for minecraft:item mod id undeadremains
 3fae3be636e2bd160f391e3c24a7acdedd18038e data/forge/tags/items/armors.json
 e9abe6c5dd392b77ac2917981c74dd6ae6ff5035 data/forge/tags/items/armors/boots.json
 7caddb7256f43b18a5b956bca19f140cfb8d3e65 data/forge/tags/items/armors/chestplate.json
@@ -36,6 +36,7 @@ d70a320783c2d7e19d30ab29b7ce3e90e8c39201 data/minecraft/tags/items/creeper_drop_
 7e8187d80e869f4072beecebb703c64a87d3eff5 data/minecraft/tags/items/doors.json
 f827780ef68924ed2b59a97161db20ed749e39ba data/minecraft/tags/items/fences.json
 6668145a662b015b66c7511b8b9e13af29316b8c data/minecraft/tags/items/fence_gates.json
+4467e703956113c7f96d5f2736c90c5e0be5dde4 data/minecraft/tags/items/fishes.json
 bd9556688c79c57ab14fc14f04b829b2ee12b6bf data/minecraft/tags/items/hanging_signs.json
 0908066f07fab78ab3c9974443eec6b341036780 data/minecraft/tags/items/hoes.json
 06b5e25a1611a8aa755389e21a9de1685cab8b4c data/minecraft/tags/items/leaves.json

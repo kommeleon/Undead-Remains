@@ -174,6 +174,7 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModItems.SPIKE.get());
 						pOutput.accept(ModItems.SPIKE_BAT.get());
 
+						//Drops from xanarian dimension
 						pOutput.accept(ModItems.XANARIAN_SPINE.get());
 						pOutput.accept(ModItems.XANARIAN_HORN.get());
 						pOutput.accept(ModItems.XANARIAN_LEATHER.get());
@@ -184,6 +185,7 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModItems.XANARIAN_KEBAB_WRAP.get());
 						pOutput.accept(ModItems.XANARIAN_KEBAB.get());
 						pOutput.accept(ModItems.WRAP.get());
+						pOutput.accept(ModItems.RAW_XANARANHA.get());
 
 						pOutput.accept(ModItems.UNDYING_WHISPERS_MUSIC_DISC.get());
 

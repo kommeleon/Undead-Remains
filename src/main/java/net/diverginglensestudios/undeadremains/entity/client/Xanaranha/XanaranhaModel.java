@@ -38,7 +38,7 @@ public class XanaranhaModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 
-	public static LayerDefinition createBodyLayer() {
+public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
@@ -57,14 +57,14 @@ public class XanaranhaModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition head = torso.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 7.0F, -17.0F));
 
 		PartDefinition head_left = head.addOrReplaceChild("head_left", CubeListBuilder.create().texOffs(30, 35).addBox(0.0F, -6.0F, -10.0F, 3.0F, 10.0F, 10.0F, new CubeDeformation(0.01F))
-				.texOffs(68, 52).addBox(0.0F, -8.0F, -10.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.01F))
-				.texOffs(50, 20).addBox(0.0F, 4.0F, -11.0F, 4.0F, 3.0F, 11.0F, new CubeDeformation(0.01F))
-				.texOffs(46, 55).addBox(-2.0F, -5.0F, -9.0F, 2.0F, 9.0F, 9.0F, new CubeDeformation(0.01F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		.texOffs(68, 52).addBox(0.0F, -8.0F, -10.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.01F))
+		.texOffs(50, 20).addBox(0.0F, 4.0F, -11.0F, 4.0F, 3.0F, 11.0F, new CubeDeformation(0.01F))
+		.texOffs(46, 55).addBox(-2.0F, -5.0F, -9.0F, 2.0F, 9.0F, 9.0F, new CubeDeformation(0.01F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition head_right = head.addOrReplaceChild("head_right", CubeListBuilder.create().texOffs(30, 35).mirror().addBox(-3.0F, -6.0F, -10.0F, 3.0F, 10.0F, 10.0F, new CubeDeformation(0.01F)).mirror(false)
-				.texOffs(68, 52).mirror().addBox(-3.0F, -8.0F, -10.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.01F)).mirror(false)
-				.texOffs(50, 20).mirror().addBox(-4.0F, 4.0F, -11.0F, 4.0F, 3.0F, 11.0F, new CubeDeformation(0.01F)).mirror(false)
-				.texOffs(56, 34).addBox(0.0F, -5.0F, -9.0F, 2.0F, 9.0F, 9.0F, new CubeDeformation(0.01F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		.texOffs(68, 52).mirror().addBox(-3.0F, -8.0F, -10.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.01F)).mirror(false)
+		.texOffs(50, 20).mirror().addBox(-4.0F, 4.0F, -11.0F, 4.0F, 3.0F, 11.0F, new CubeDeformation(0.01F)).mirror(false)
+		.texOffs(56, 34).addBox(0.0F, -5.0F, -9.0F, 2.0F, 9.0F, 9.0F, new CubeDeformation(0.01F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition tail = Xanaranha.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 35).addBox(-2.0F, -1.0F, 0.0F, 4.0F, 9.0F, 11.0F, new CubeDeformation(-0.01F)), PartPose.offset(0.0F, -16.0F, 1.5F));
 
@@ -82,7 +82,7 @@ public class XanaranhaModel<T extends Entity> extends HierarchicalModel<T> {
 			f1 = 1.7F;
 		}
 		this.tail.yRot = -f * 0.25F * Mth.sin(f1 * 0.6F * pAgeInTicks);
-		//this.animate(((XanaranhaEntity) pEntity).attackAnimationState, ModFishAnimations.XANARANHA_ATTACK, pAgeInTicks, 1f);
+		this.animate(((XanaranhaEntity) pEntity).attackAnimationState, ModFishAnimations.XANARANHA_ATTACK, pAgeInTicks, 1f);
 
 	}
 

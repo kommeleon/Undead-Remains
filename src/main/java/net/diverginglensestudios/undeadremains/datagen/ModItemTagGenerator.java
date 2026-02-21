@@ -68,6 +68,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 		this.tag(Tags.Items.BONES)
 				.add(ModItems.XANARIAN_SPINE.get());
 
+		// FISHES
+		this.tag(ItemTags.FISHES)
+				.add(ModItems.RAW_XANARANHA.get());
+
 		// LEATHER
 		this.tag(Tags.Items.LEATHER)
 				.add(ModItems.XANARIAN_LEATHER.get());

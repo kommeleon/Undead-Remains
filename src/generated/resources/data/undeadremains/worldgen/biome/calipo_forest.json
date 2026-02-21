@@ -126,9 +126,9 @@
     "water_creature": [
       {
         "type": "undeadremains:xanaranha",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 5
+        "maxCount": 8,
+        "minCount": 5,
+        "weight": 20
       }
     ]
   },

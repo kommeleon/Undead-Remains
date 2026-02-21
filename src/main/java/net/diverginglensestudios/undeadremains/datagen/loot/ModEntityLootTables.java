@@ -46,7 +46,8 @@ public class ModEntityLootTables extends EntityLootSubProvider {
 				ModEntities.STRAY_ZOMBIE.get(),
 				ModEntities.FOUR_EYED_XANARIAN.get(),
 				ModEntities.XANARIAN.get(),
-				ModEntities.HORNED_XANARIAN.get());
+				ModEntities.HORNED_XANARIAN.get(),
+				ModEntities.XANARANHA.get());
 	}
 
 	@Override
@@ -353,5 +354,13 @@ public class ModEntityLootTables extends EntityLootSubProvider {
 										.when(LootItemRandomChanceCondition
 												.randomChance(0.9f)))));
 
+			this.add(ModEntities.XANARANHA.get(),
+				LootTable.lootTable()
+						.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+								.add(LootItem.lootTableItem(ModItems.RAW_XANARANHA.get())
+										.apply(SetItemCountFunction.setCount(
+												ConstantValue.exactly(1.0f)))
+										.when(LootItemRandomChanceCondition
+												.randomChance(1f)))));
 	}
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-07T13:05:49.706327	Loot Tables
+// 1.20.1	2026-02-21T18:25:34.7060402	Loot Tables
 76a75524e5dcd7d1c9d5de5047a92ee68b60e2f2 data/undeadremains/loot_tables/blocks/ash_button.json
 8806032776c8bea89f252419be9030ea76e9d5fc data/undeadremains/loot_tables/blocks/ash_door.json
 230184633e7e39e87f97d44c09c0838cf3798f4d data/undeadremains/loot_tables/blocks/ash_fence.json
@@ -118,4 +118,5 @@ e53f8f38a04fefe7a76ec6bbba1652593292fd44 data/undeadremains/loot_tables/entities
 358964f9cd5b8ff01e2f14528a0a4ddd12c6dcea data/undeadremains/loot_tables/entities/supreme_zombie.json
 dc33cf605cdc603a375aed61b6a10f00a7a7890a data/undeadremains/loot_tables/entities/tree_zombie.json
 40ceee8f0fd58396bbac6c19564f06319298d40a data/undeadremains/loot_tables/entities/undead_archeologist.json
+059ad072ed2804d4ced356ea93f0640a554ac7a9 data/undeadremains/loot_tables/entities/xanaranha.json
 fcfa185ed4d2b2a2b133728ee545aff4ce13ec92 data/undeadremains/loot_tables/entities/xanarian.json

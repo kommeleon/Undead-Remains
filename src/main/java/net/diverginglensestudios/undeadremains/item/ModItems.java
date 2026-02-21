@@ -101,6 +101,10 @@ public class ModItems {
 	public static final RegistryObject<Item> XANS_LEAF = ITEMS.register("xans_leaf",
 			() -> new ItemNameBlockItem(ModBlocks.XANS_LEAVES.get(), (new Item.Properties()).food(ModFoods.XANS_LEAF)));
 
+	public static final RegistryObject<Item> RAW_XANARANHA = ITEMS.register("raw_xanaranha",
+			() -> new Item(new Item.Properties().food(ModFoods.RAW_XANARANHA)));
+
+
 	// Fuel Items
 	public static final RegistryObject<Item> METATURBONITE = ITEMS.register("metaturbonite",
 			() -> new FuelItem(new Item.Properties().rarity(Rarity.RARE), 25000));
