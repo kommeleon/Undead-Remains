@@ -48,6 +48,10 @@ public class ModBlockEntities {
 					BlockEntityType.Builder.<ModHangingSignBlockEntity>of(ModHangingSignBlockEntity::new,
 							ModBlocks.ASH_HANGING_SIGN.get(), ModBlocks.ASH_WALL_HANGING_SIGN.get(), ModBlocks.CALIPO_HANGING_SIGN.get(), ModBlocks.CALIPO_WALL_HANGING_SIGN.get()).build(null));
 
+	public static final RegistryObject<BlockEntityType<StructureExtenderBlockEntity>> STRUCTURE_EXTENDER_BE =
+			BLOCK_ENTITIES.register("structure_extender_be", () ->
+					BlockEntityType.Builder.<StructureExtenderBlockEntity>of(StructureExtenderBlockEntity::new,
+							ModBlocks.STRUCTURE_EXTENDER_BLOCK.get()).build(null));
 
 	public static void register(IEventBus eventBus) {
 		BLOCK_ENTITIES.register(eventBus);

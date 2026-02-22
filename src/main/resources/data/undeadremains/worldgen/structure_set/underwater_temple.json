@@ -1,0 +1,17 @@
+{
+	"structures": [
+		{
+			"structure": "undeadremains:underwater_temple",
+			"weight": 1
+		}
+	],
+	"placement": {
+		"salt": 54748903,
+
+		"spacing": 20,
+
+		"separation": 6,
+
+		"type": "minecraft:random_spread"
+	}
+}
