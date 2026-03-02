@@ -10,6 +10,7 @@ package net.diverginglensestudios.undeadremains.item;
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.block.ModBlocks;
 import net.diverginglensestudios.undeadremains.entity.ModEntities;
+import net.diverginglensestudios.undeadremains.entity.custom.Other.MetaturboniteGrenadeProjectileEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Other.ModBoatEntity;
 import net.diverginglensestudios.undeadremains.item.armor.ModArmorMaterials;
 import net.diverginglensestudios.undeadremains.item.armor.ModSimpleArmorItem;
@@ -55,9 +56,14 @@ public class ModItems {
 			() -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> EMPTY_FUEL_CELL = ITEMS.register("empty_fuel_cell",
 			() -> new Item(new Item.Properties()));
+	public static final RegistryObject<Item> SUCKER_TRUNK = ITEMS.register("sucker_trunk",
+			() -> new Item(new Item.Properties()));
 	// Advanced Items
 	public static final RegistryObject<Item> METATORBERNITE_GRENADE = ITEMS.register("metatorbernite_grenade",
 			() -> new MetatorberniteGrenadeItem(new Item.Properties()));
+
+	public static final RegistryObject<Item> METATURBONITE_GRENADE = ITEMS.register("metaturbonite_grenade",
+			() -> new MetaturboniteGrenadeItem(new Item.Properties()));
 
 	// Food Items
 	public static final RegistryObject<Item> THE_FOSSILS_EYE = ITEMS.register("the_fossils_eye",
@@ -109,7 +115,6 @@ public class ModItems {
 
 	public static final RegistryObject<Item> XANARANHA_ON_A_STICK = ITEMS.register("xanaranha_on_a_stick",
 			() -> new Item(new Item.Properties().food(ModFoods.XANARANHA_ON_A_STICK)));
-
 
 	// Fuel Items
 	public static final RegistryObject<Item> METATURBONITE = ITEMS.register("metaturbonite",

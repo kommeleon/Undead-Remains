@@ -845,12 +845,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//////////////////// SHAPED////////////////////
 		//////////////////// SHAPELESS////////////////////
 		// SHAPELESS ITEM//
-		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METATORBERNITE_GRENADE.get(), 4)// resulting
-				// items
-				.requires(ModItems.METATORBERNITE.get())// required items
-				.requires(Items.GLASS_BOTTLE)// required items
-				.unlockedBy(getHasName(ModItems.METATORBERNITE.get()),
-						has(ModItems.METATORBERNITE.get()))
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METATORBERNITE_GRENADE.get(), 4)
+				.requires(ModItems.METATORBERNITE.get())
+				.requires(Items.GLASS_BOTTLE)//
+				.unlockedBy(getHasName(ModItems.METATORBERNITE.get()), has(ModItems.METATORBERNITE.get()))
+				.save(pWriter);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METATURBONITE_GRENADE.get(), 4)
+				.requires(ModItems.METATURBONITE.get())
+				.requires(Items.GLASS_BOTTLE)
+				.unlockedBy(getHasName(ModItems.METATURBONITE.get()), has(ModItems.METATURBONITE.get()))
 				.save(pWriter);
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ASH_BUTTON.get(), 1)// resulting items
 				.requires(ModBlocks.ASH_PLANKS.get())// required items

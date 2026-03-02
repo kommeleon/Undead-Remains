@@ -190,8 +190,8 @@ public class UndeadRemains { // Define the Class for the Mod
 					pContext -> new Cm_Falling_Block_Renderer(pContext));
 			EntityRenderers.register(ModEntities.CUSTOMEFFECTCLOUD.get(),
 					pContext -> new NoopRenderer(pContext));
-			EntityRenderers.register(ModEntities.METATORBERNITE_GRENADE_PROJECTILE.get(),
-					ThrownItemRenderer::new);
+			EntityRenderers.register(ModEntities.METATORBERNITE_GRENADE_PROJECTILE.get(), ThrownItemRenderer::new);
+			EntityRenderers.register(ModEntities.METATURBONITE_GRENADE_PROJECTILE.get(), ThrownItemRenderer::new);
 			MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
 			MenuScreens.register(ModMenuTypes.XANARIAN_GATEWAY_MENU.get(), XanarianGatewayScreen::new);
 			MenuScreens.register(ModMenuTypes.METATORBERNITE_ENRICHER_MENU.get(), MetatorberniteEnricherScreen::new);

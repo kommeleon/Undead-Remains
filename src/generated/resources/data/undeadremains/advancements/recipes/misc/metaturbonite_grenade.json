@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_metaturbonite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "undeadremains:metaturbonite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "undeadremains:metaturbonite_grenade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_metaturbonite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "undeadremains:metaturbonite_grenade"
+    ]
+  },
+  "sends_telemetry_event": false
+}

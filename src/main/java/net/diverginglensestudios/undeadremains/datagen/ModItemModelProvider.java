@@ -70,6 +70,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleItem(ModItems.ASH_BOAT);
 		simpleItem(ModItems.ASH_CHEST_BOAT);
 		simpleItem(ModItems.METATORBERNITE_GRENADE);
+		simpleItem(ModItems.METATURBONITE_GRENADE);
 		// Food
 		simpleItem(ModItems.FOSSILIZED_DRUMSTICK);
 		simpleItem(ModItems.GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK);

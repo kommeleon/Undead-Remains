@@ -10,14 +10,10 @@ package net.diverginglensestudios.undeadremains.entity;
 // Import Mod Elements
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.entity.custom.Fish.XanaranhaEntity;
+import net.diverginglensestudios.undeadremains.entity.custom.Other.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Xanarians.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Bosses.*;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.Cm_Falling_Block_Entity;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.CustomEffectCloudEntity;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.MetatorberniteGrenadeProjectileEntity;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.ModBoatEntity;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.ModChestBoatEntity;
 
 // Import Minecraft and Forge Elements
 import net.minecraft.world.entity.EntityType;
@@ -122,6 +118,10 @@ public class ModEntities {
 	public static final RegistryObject<EntityType<MetatorberniteGrenadeProjectileEntity>> METATORBERNITE_GRENADE_PROJECTILE =
 			ENTITY_TYPES.register("metatorbernite_grenade_projectile", () -> EntityType.Builder.<MetatorberniteGrenadeProjectileEntity>of(MetatorberniteGrenadeProjectileEntity::new, MobCategory.MISC)
 					.sized(0.5f, 0.5f).build("metatorbernite_grenade_projectile"));
+
+	public static final RegistryObject<EntityType<MetaturboniteGrenadeProjectileEntity>> METATURBONITE_GRENADE_PROJECTILE =
+			ENTITY_TYPES.register("metaturbonite_grenade_projectile", () -> EntityType.Builder.<MetaturboniteGrenadeProjectileEntity>of(MetaturboniteGrenadeProjectileEntity::new, MobCategory.MISC)
+					.sized(0.5f, 0.5f).build("metaturbonite_grenade_projectile"));
 
 
 
