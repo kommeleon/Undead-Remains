@@ -15,10 +15,13 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.player.Player;
 
-public class SuckerAttachToPlayerGoal extends MeleeAttackGoal {
+public class SuckerAttachGoal extends MeleeAttackGoal {
 	private final SuckerEntity entity;
+	private int attackDelay = 8;
+	private int ticksUntilNextAttack = 2;
+	private boolean shouldCountTillNextAttack = false;
 
-	public SuckerAttachToPlayerGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
+	public SuckerAttachGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
 		super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
 		entity = ((SuckerEntity) pMob);
 	}
@@ -26,14 +29,28 @@ public class SuckerAttachToPlayerGoal extends MeleeAttackGoal {
 	@Override
 	public void start() {
 		super.start();
+		attackDelay = 8;
+		ticksUntilNextAttack = 2;
 	}
 
 	@Override
 	protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
 		if (isEnemyWithinAttackDistance(pEnemy, pDistToEnemySqr)) {
-			this.performAttack(pEnemy);
+			shouldCountTillNextAttack = true;
+
+			if(isTimeToStartAttackAnimation()) {
+				entity.setAttacking(true);
+			}
+
+			if(isTimeToAttack()) {
+				this.mob.getLookControl().setLookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
+				performAttack(pEnemy);
+			}
 		} else {
-			entity.setAttached(false);
+			resetAttackCooldown();
+			shouldCountTillNextAttack = false;
+			entity.setAttacking(false);
+			entity.attackAnimationTimeout = 0;
 		}
 	}
 
@@ -41,20 +58,43 @@ public class SuckerAttachToPlayerGoal extends MeleeAttackGoal {
 		return pDistToEnemySqr <= this.getAttackReachSqr(pEnemy);
 	}
 
-	protected void performAttack(LivingEntity pEnemy) {
-			pEnemy.startRiding(entity, true);
-			entity.setAttached(true);
-
+	protected void resetAttackCooldown() {
+		this.ticksUntilNextAttack = this.adjustedTickDelay(11);
 	}
+
+	protected boolean isTimeToAttack() {
+		return this.ticksUntilNextAttack <= 0;
+	}
+
+	protected boolean isTimeToStartAttackAnimation() {
+		return this.ticksUntilNextAttack <= attackDelay;
+	}
+
+	protected int getTicksUntilNextAttack() {
+		return this.ticksUntilNextAttack;
+	}
+
+
+	protected void performAttack(LivingEntity pEnemy) {
+		this.resetAttackCooldown();
+		if (pEnemy instanceof Player player && !player.isPassenger()) {
+        	player.startRiding(entity, true);
+    		entity.setAttached(true);
+    	}
+	}	
 
 	@Override
 	public void tick() {
 		super.tick();
+		if(shouldCountTillNextAttack) {
+			this.ticksUntilNextAttack = Math.max(this.ticksUntilNextAttack - 1, 0);
+		}
 	}
 
 	@Override
 	public void stop() {
 		entity.setAttacking(false);
+		entity.setAttached(false);
 		super.stop();
 	}
 }
