@@ -33,6 +33,11 @@
 	"item.undeadremains.metatorbernite": "Metatorbernite",
 	"item.undeadremains.metaturbonite": "Metaturbonite",
 	"block.undeadremains.metatorbernite_ore": "Metatorbernite Ore",
+	"item.undeadremains.xanaranha_horn": "Xanaranha Horn",
+	"item.undeadremains.xanaranha_horn_on_a_stick": "Xanaranha Horn on a Stick",
+	"item.undeadremains.sucker_trunk": "Sucker Trunk",
+	"item.undeadremains.cooked_sucker_trunk": "Cooked Sucker Trunk",
+		
 
 	"item.undeadremains.gas_mask": "Gas Mask",
 	"item.undeadremains.metatorbernite_gas_mask": "Metatorbernite Gas Mask",
@@ -96,6 +101,7 @@
 	"item.undeadremains.metatorbernite_leggings": "Metatorbernite Leggings",
 	"item.undeadremains.metatorbernite_boots": "Metatorbernite Boots",
 	"item.undeadremains.metatorbernite_grenade": "Metatorbernite Grenade",
+	"item.undeadremains.metaturbonite_grenade": "Metaturbonite Grenade",
 
 	"item.undeadremains.big_woodling_spawn_egg": "Big Woodling Spawn Egg",
 	"item.undeadremains.small_woodling_spawn_egg": "Small Woodling Spawn Egg",
@@ -112,6 +118,8 @@
 	"item.undeadremains.horned_xanarian_spawn_egg": "Horned Xanarian Spawn Egg",
 	"item.undeadremains.xanarian_cannibal_spawn_egg": "Xanarian Cannibal Spawn Egg",
 	"item.undeadremains.supreme_knight_spawn_egg": "Sahn Uzal Spawn Egg",
+	"item.undeadremains.xanaranha_spawn_egg": "Xanaranha Spawn Egg",
+	"item.undeadremains.sucker_spawn_egg": "Sucker Spawn Egg",
 
 	"item.undeadremains.ash_boat": "Ash Boat",
 	"item.undeadremains.ash_chest_boat": "Ash Chest Boat",

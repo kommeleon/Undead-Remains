@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 120,
+  "experience": 0.3,
+  "group": "cooked_sucker_trunk",
+  "ingredient": {
+    "item": "undeadremains:sucker_trunk"
+  },
+  "result": "undeadremains:cooked_sucker_trunk"
+}

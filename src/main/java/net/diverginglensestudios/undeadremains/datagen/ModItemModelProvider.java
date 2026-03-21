@@ -88,6 +88,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleItem(ModItems.RAW_XANARANHA);
 		simpleItem(ModItems.COOKED_XANARANHA);
 		simpleItem(ModItems.XANARANHA_HORN_ON_A_STICK);
+		simpleItem(ModItems.XANARANHA_HORN);
+		simpleItem(ModItems.SUCKER_TRUNK);
+		simpleItem(ModItems.COOKED_SUCKER_TRUNK);
 		// Saplings
 		saplingItem(ModBlocks.ASH_SAPLING);
 		saplingItem(ModBlocks.CALIPO_SAPLING);

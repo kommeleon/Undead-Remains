@@ -44,11 +44,6 @@ public class SuckerEntity extends AbstractFish {
 		private static final EntityDataAccessor<Boolean> ATTACHED =
 			SynchedEntityData.defineId(SuckerEntity.class, EntityDataSerializers.BOOLEAN);
 
-	public final AnimationState idleAnimationState = new AnimationState();
-	private int idleAnimationTimeout = 0;
-
-	public final AnimationState attackAnimationState = new AnimationState();
-	public int attackAnimationTimeout = 0;
 
 	@Override
 	public void tick() {
@@ -60,53 +55,18 @@ public class SuckerEntity extends AbstractFish {
 				if (target instanceof Player player && !player.isPassenger()) {
 					player.startRiding(this, true);
 				}
+				this.setDeltaMovement(this.getDeltaMovement().add(0, -0.1, 0));
 			}
 
 		}
-
-		if(this.level().isClientSide()) {
-			setupAnimationStates();
-		}
 	}
 
-	private void setupAnimationStates() {
-		if(this.idleAnimationTimeout <= 0) {
-			this.idleAnimationTimeout = this.random.nextInt(40) + 80;
-			this.idleAnimationState.start(this.tickCount);
-		} else {
-			--this.idleAnimationTimeout;
-		}
-
-		if(this.isAttacking() && attackAnimationTimeout <= 0) {
-			attackAnimationTimeout = 11; // Length in ticks of your animation
-			attackAnimationState.start(this.tickCount);
-		} else {
-			--this.attackAnimationTimeout;
-		}
-
-		if(!this.isAttacking()) {
-			attackAnimationState.stop();
-		}
-	}
-
-	@Override
-	protected void updateWalkAnimation(float pPartialTick) {
-		float f;
-		if(this.getPose() == Pose.STANDING) {
-			f = Math.min(pPartialTick * 6F, 1f);
-		} else {
-			f = 0f;
-		}
-		this.walkAnimation.update(f, 0.2f);
-	}
 
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new TryFindWaterGoal(this));
 		this.targetSelector.addGoal(2, new EntityAINearestTarget3D<>(this, Player.class, true));
-		this.targetSelector.addGoal(2, new EntityAINearestTarget3D<>(this, AbstractXanarian.class, true));
-		this.targetSelector.addGoal(2, new EntityAINearestTarget3D<>(this, Creeper.class, true));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this, XanaranhaEntity.class));
 		this.goalSelector.addGoal(2, new SuckerAttachGoal(this, 3D, true));
 		this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1D, 10));

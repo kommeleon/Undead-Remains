@@ -70,6 +70,8 @@ public class ModEventBusEvents {
 		event.register(
 				ModEntities.XANARANHA.get(),SpawnPlacements.Type.IN_WATER,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,AbstractFish::checkMobSpawnRules,SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(
+				ModEntities.SUCKER.get(),SpawnPlacements.Type.IN_WATER,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,AbstractFish::checkMobSpawnRules,SpawnPlacementRegisterEvent.Operation.REPLACE);
+		event.register(
 				ModEntities.FOUR_EYED_XANARIAN.get(),SpawnPlacements.Type.ON_GROUND,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,Monster::checkMonsterSpawnRules,SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(
 				ModEntities.XANARIAN.get(),SpawnPlacements.Type.ON_GROUND,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,Monster::checkMonsterSpawnRules,SpawnPlacementRegisterEvent.Operation.REPLACE);

@@ -73,9 +73,6 @@ public class ModFoods {
 	public static final FoodProperties COOKED_XANARANHA = new FoodProperties.Builder().nutrition(6)
 			.saturationMod(0.2f).build();
 
-	public static final FoodProperties XANARANHA_HORN_ON_A_STICK = new FoodProperties.Builder().nutrition(6)
-			.saturationMod(0.2f).fast().build();
-
 	public static final FoodProperties SUCKER_TRUNK = new FoodProperties.Builder().nutrition((int) 0.5f)
 			.saturationMod(0.1f)
 			.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 0), 1.0F)

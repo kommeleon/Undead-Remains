@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "undeadremains:item/xanaranha_on_a_stick"
+    "layer0": "undeadremains:item/xanaranha_horn_on_a_stick"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sucker_trunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "undeadremains:sucker_trunk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "undeadremains:cooked_sucker_trunk_from_smelting_sucker_trunk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sucker_trunk",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "undeadremains:cooked_sucker_trunk_from_smelting_sucker_trunk"
+    ]
+  },
+  "sends_telemetry_event": false
+}

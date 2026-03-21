@@ -892,7 +892,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 						has(ModBlocks.METATORBERNITE_BLOCK.get()))
 				.save(pWriter, UndeadRemains.MOD_ID + ":metatorbernite_from_metatorbernite_block");
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.XANARANHA_HORN_ON_A_STICK.get(), 1)
-				.requires(ModItems.METATORBERNITE.get())
+				.requires(ModItems.XANARANHA_HORN.get())
 				.requires(Items.FISHING_ROD)//
 				.unlockedBy(getHasName(ModItems.XANARANHA_HORN.get()), has(ModItems.XANARANHA_HORN.get()))
 				.save(pWriter);

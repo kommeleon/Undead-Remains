@@ -51,7 +51,6 @@ public class SuckerAttachGoal extends MeleeAttackGoal {
 			shouldCountTillNextAttack = false;
 			entity.setAttacking(false);
 			entity.setAttached(false);
-			entity.attackAnimationTimeout = 0;
 		}
 	}
 
