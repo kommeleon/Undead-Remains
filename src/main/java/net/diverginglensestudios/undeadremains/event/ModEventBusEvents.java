@@ -11,6 +11,7 @@ import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.entity.ModEntities;
 import net.diverginglensestudios.undeadremains.entity.custom.Fish.SuckerEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Fish.XanaranhaEntity;
+import net.diverginglensestudios.undeadremains.entity.custom.Skeletons.DrownedSkeletonEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Xanarians.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Bosses.*;
@@ -46,6 +47,7 @@ public class ModEventBusEvents {
 		event.put(ModEntities.SUCKER.get(), SuckerEntity.createAttributes().build());
 		event.put(ModEntities.BIG_WOODLING.get(), BigWoodlingEntity.createAttributes().build());
 		event.put(ModEntities.SMALL_WOODLING.get(), SmallWoodlingEntity.createAttributes().build());
+		event.put(ModEntities.DROWNED_SKELETON.get(), DrownedSkeletonEntity.createAttributes().build());
 	}
 
 

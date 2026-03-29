@@ -56,11 +56,6 @@ public class ModBiomeModifiers {
 				HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.METATORBERNITE_ORE_PLACED_KEY)),
 				GenerationStep.Decoration.UNDERGROUND_ORES));
 
-		context.register(ADD_TREE_ASH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-				biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
-				HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ASH_PLACED_KEY)),
-				GenerationStep.Decoration.VEGETAL_DECORATION));
-
 
 		context.register(ADD_UNDEAD_ARCHEOLOGIST, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
 				biomes.getOrThrow(BiomeTags.IS_OVERWORLD),

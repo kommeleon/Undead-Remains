@@ -11,6 +11,7 @@ package net.diverginglensestudios.undeadremains.event;
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.block.entity.ModBlockEntities;
 import net.diverginglensestudios.undeadremains.block.entity.renderer.FossilPolisherBlockEntityRenderer;
+import net.diverginglensestudios.undeadremains.entity.client.DrownedSkeleton.DrownedSkeletonModel;
 import net.diverginglensestudios.undeadremains.entity.client.ModModelLayers;
 import net.diverginglensestudios.undeadremains.entity.client.BigWoodling.BigWoodlingModel;
 import net.diverginglensestudios.undeadremains.entity.client.CowZombie.CowZombieModel;
@@ -63,6 +64,7 @@ public class ModEventBusClientEvents {
 		event.registerLayerDefinition(ModModelLayers.SUCKER_LAYER, SuckerModel::createBodyLayer);
 		event.registerLayerDefinition(ModModelLayers.BIG_WOODLING_LAYER, BigWoodlingModel::createBodyLayer);
 		event.registerLayerDefinition(ModModelLayers.SMALL_WOODLING_LAYER, SmallWoodlingModel::createBodyLayer);
+		event.registerLayerDefinition(ModModelLayers.DROWNED_SKELETON_LAYER, DrownedSkeletonModel::createBodyLayer);
 
 		event.registerLayerDefinition(ModModelLayers.PINE_BOAT_LAYER, BoatModel::createBodyModel);
 		event.registerLayerDefinition(ModModelLayers.PINE_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);

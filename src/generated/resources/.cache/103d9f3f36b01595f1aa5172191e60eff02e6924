@@ -1,4 +1,4 @@
-// 1.20.1	2026-03-21T09:58:16.2929079	Registries
+// 1.20.1	2026-03-22T14:38:11.7580646	Registries
 6651ee0dde6125861be617304c26d0295a06fabe data/undeadremains/dimension/fossildim.json
 58144749eb3dc6f2a408ebd319ec04fcd25f7982 data/undeadremains/dimension_type/fossildim_type.json
 cf571a010ef494bd02f637f4ecea813eecf5b707 data/undeadremains/forge/biome_modifier/add_cow_zombie.json
@@ -8,7 +8,6 @@ dd9f5a7c0950e983d3fa02bdb4b3a03a3551077b data/undeadremains/forge/biome_modifier
 5c26c846cbe2aba83b1d2a8ba95d6622b5cfefd6 data/undeadremains/forge/biome_modifier/add_metatorbernite_ore.json
 a483e73d84bc1357a470df1f3358487c42e5c8fa data/undeadremains/forge/biome_modifier/add_spike.json
 0699ce79568e4a67aa6f8e9b8830b7ca4dfc8c92 data/undeadremains/forge/biome_modifier/add_stray_zombie.json
-0f1e922b8634b421968e21228f9caf4acf05ab12 data/undeadremains/forge/biome_modifier/add_tree_ash.json
 3c1f3084b2a759d88a1b400b6e6c5a3239c9b9ca data/undeadremains/forge/biome_modifier/add_tree_zombie.json
 d80dd2b60dd1fa1fba54509b89e881e1c824775f data/undeadremains/forge/biome_modifier/add_undead_archeologist.json
 843aaf89c1cb68cd21b8e27ec5f1d8059e43036c data/undeadremains/worldgen/biome/ancient_ash_forest.json

@@ -12,6 +12,7 @@ import net.diverginglensestudios.undeadremains.entity.client.*;
 import net.diverginglensestudios.undeadremains.entity.client.BigWoodling.BigWoodlingRenderer;
 import net.diverginglensestudios.undeadremains.entity.client.Cm_Falling_Block.Cm_Falling_Block_Renderer;
 import net.diverginglensestudios.undeadremains.entity.client.CowZombie.CowZombieRenderer;
+import net.diverginglensestudios.undeadremains.entity.client.DrownedSkeleton.DrownedSkeletonRenderer;
 import net.diverginglensestudios.undeadremains.entity.client.FossilizedZombie.FossilizedZombieRenderer;
 import net.diverginglensestudios.undeadremains.entity.client.FourEyedXanarian.FourEyedXanarianRenderer;
 import net.diverginglensestudios.undeadremains.entity.client.HammerZombie.HammerZombieRenderer;
@@ -185,6 +186,10 @@ public class UndeadRemains { // Define the Class for the Mod
 					pContext -> new SuckerRenderer(pContext));
 			EntityRenderers.register(ModEntities.HORNED_XANARIAN.get(),
 					pContext -> new HornedXanarianRenderer(pContext));
+
+			EntityRenderers.register(ModEntities.DROWNED_SKELETON.get(),
+					pContext -> new DrownedSkeletonRenderer(pContext));
+
 			EntityRenderers.register(ModEntities.MOD_BOAT.get(),
 					pContext -> new ModBoatRenderer(pContext, false));
 			EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(),

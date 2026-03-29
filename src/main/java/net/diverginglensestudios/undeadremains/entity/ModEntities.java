@@ -12,6 +12,7 @@ import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.entity.custom.Fish.SuckerEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Fish.XanaranhaEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Other.*;
+import net.diverginglensestudios.undeadremains.entity.custom.Skeletons.DrownedSkeletonEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Xanarians.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Zombies.*;
 import net.diverginglensestudios.undeadremains.entity.custom.Bosses.*;
@@ -99,6 +100,10 @@ public class ModEntities {
 	public static final RegistryObject<EntityType<SupremeZombieEntity>> SUPREME_ZOMBIE =
 			ENTITY_TYPES.register("supreme_zombie",  () -> EntityType.Builder.of(SupremeZombieEntity::new, MobCategory.MONSTER)
 					.sized(0.6f, 2f).build("supreme_zombie"));
+
+	public static final RegistryObject<EntityType<DrownedSkeletonEntity>> DROWNED_SKELETON =
+			ENTITY_TYPES.register("drowned_skeleton",  () -> EntityType.Builder.of(DrownedSkeletonEntity::new, MobCategory.MONSTER)
+					.sized(0.6f, 2f).build("drowned_skeleton"));
 
 	public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
 			ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
