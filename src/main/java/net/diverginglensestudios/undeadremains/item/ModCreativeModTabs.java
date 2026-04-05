@@ -212,6 +212,7 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModItems.XANARIAN_CANNIBAL_SPAWN_EGG.get());
 						pOutput.accept(ModItems.HORNED_XANARIAN_SPAWN_EGG.get());
 						pOutput.accept(ModItems.SUPREME_KNIGHT_SPAWN_EGG.get());
+						pOutput.accept(ModItems.DROWNED_SKELETON_SPAWN_EGG.get());
 
 						pOutput.accept(ModBlocks.FOSSIL_ALTAR.get());
 						pOutput.accept(ModItems.METATORBERNITE_ENRICHER_CONTROLLER_ITEM.get());

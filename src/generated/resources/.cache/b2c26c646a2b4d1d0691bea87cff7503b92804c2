@@ -1,4 +1,4 @@
-// 1.20.1	2026-03-21T10:28:34.3030716	Item Models: undeadremains
+// 1.20.1	2026-03-29T20:27:26.5095316	Item Models: undeadremains
 2ab9beff061ae44e53920d54046f6ff3a3d6904a assets/undeadremains/models/item/amethyst_modified_fossil_sword.json
 dbef713152a3abb4439f879d96f5829998a2d16a assets/undeadremains/models/item/ash_boat.json
 966ddf2d5590b696a89ba29b85f4a8ab5382db6d assets/undeadremains/models/item/ash_button.json
@@ -91,6 +91,7 @@ a16a4c1bb7ad588378d268f46faa7f829515c4c5 assets/undeadremains/models/item/deep_l
 a69a2d99ac32f24bdc75e46182ab9ca7eea90f79 assets/undeadremains/models/item/deep_langstone_slab.json
 12f0c1b3750b1043dd558084ccef2dca359b38ed assets/undeadremains/models/item/deep_langstone_stairs.json
 d8f7e1b057253fd54929ab096d571419f176221e assets/undeadremains/models/item/deep_langstone_wall.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/undeadremains/models/item/drowned_skeleton_spawn_egg.json
 933973fd922e9b7b7892525ff14f2ef60a5a1a82 assets/undeadremains/models/item/empty_fuel_cell.json
 b05c6d0029d508a4655de89ba51a82ac176087cf assets/undeadremains/models/item/fossil.json
 d75d85bde2eabfdc21f69beb6b638ff545f5dafc assets/undeadremains/models/item/fossilized_drumstick.json

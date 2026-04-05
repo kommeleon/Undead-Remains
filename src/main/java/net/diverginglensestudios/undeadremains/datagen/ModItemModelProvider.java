@@ -219,6 +219,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		withExistingParent(ModItems.XANARIAN_CANNIBAL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		withExistingParent(ModItems.XANARANHA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		withExistingParent(ModItems.SUCKER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+		withExistingParent(ModItems.DROWNED_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 	}
 
 	// Shoutout to El_Redstoniano for making this

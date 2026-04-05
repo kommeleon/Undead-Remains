@@ -359,7 +359,9 @@ public class ModItems {
 			"sucker_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntities.SUCKER, 0x90aeb5, 0x4f334d, new Item.Properties()));
 
-	//TODO: Add spawnegg for drowned Skeleton
+	public static final RegistryObject<Item> DROWNED_SKELETON_SPAWN_EGG = ITEMS.register(
+			"drowned_skeleton_spawn_egg",
+			() -> new ForgeSpawnEggItem(ModEntities.DROWNED_SKELETON, 0x598f9e, 0xbaad96, new Item.Properties()));
 
 	// Signs
 	public static final RegistryObject<Item> ASH_SIGN = ITEMS.register("ash_sign",

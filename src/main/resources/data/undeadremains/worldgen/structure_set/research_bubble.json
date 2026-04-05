@@ -1,0 +1,17 @@
+{
+	"structures": [
+		{
+			"structure": "undeadremains:research_bubble",
+			"weight": 1
+		}
+	],
+	"placement": {
+		"salt": 7893478,
+
+		"spacing": 20,
+
+		"separation": 6,
+
+		"type": "minecraft:random_spread"
+	}
+}
