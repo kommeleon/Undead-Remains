@@ -161,6 +161,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 		this.tag(BlockTags.SAND)
 				.add(ModBlocks.XAND.get());
 
+		// SAND
+		this.tag(BlockTags.CORAL_BLOCKS)
+				.add(ModBlocks.BUBBLE_BLOCK.get());
+
 		// DIRT
 		this.tag(BlockTags.DIRT)
 				.add(ModBlocks.LIVING_LANGSTONE.get());

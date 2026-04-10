@@ -168,6 +168,7 @@ public class ModCreativeModTabs {
 
 						pOutput.accept(ModBlocks.XAND.get());
 						pOutput.accept(ModBlocks.ANCIENT_PILLAR.get());
+						pOutput.accept(ModBlocks.ANCIENT_BRICKS.get());
 
 						pOutput.accept(ModItems.SUNGLASSES.get());
 

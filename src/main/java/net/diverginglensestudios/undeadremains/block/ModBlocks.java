@@ -132,6 +132,14 @@ public class ModBlocks {
 			() -> new ModTooltipBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)
 					.sound(SoundType.METAL), "tooltip.undeadremains.langrite_nugget_block"));
 
+	public static final RegistryObject<Block> BUBBLE_BLOCK = registerBlock("bubble_block",
+			() -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.sound(SoundType.CORAL_BLOCK).noOcclusion()));
+
+	public static final RegistryObject<Block> ANCIENT_BRICKS = registerBlock("ancient_bricks",
+			() -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)
+					.sound(SoundType.STONE)));
+					
 	// Advanced Blocks
 
 	public static final RegistryObject<Block> FOSSIL_POLISHER = registerBlock("fossil_polisher",

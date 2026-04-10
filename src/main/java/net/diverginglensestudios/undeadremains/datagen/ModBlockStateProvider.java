@@ -71,7 +71,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		blockWithItem(ModBlocks.CHISELED_SUPREME_BRICKS);
 		blockWithItem(ModBlocks.XAND);
 		blockWithItem(ModBlocks.LANGRITE_NUGGET_BLOCK);
-
+		blockWithItem(ModBlocks.BUBBLE_BLOCK);
+		blockWithItem(ModBlocks.ANCIENT_BRICKS);
+		
 		// BlockItem
 		blockItem(ModBlocks.LIVING_LANGSTONE);
 
