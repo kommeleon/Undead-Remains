@@ -55,6 +55,10 @@ public class ModBlocks {
 			() -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
+	public static final RegistryObject<Block> DEEP_LANGSTONE_LANGRITE_ORE = registerBlock("deep_langstone_langrite_ore",
+			() -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+
 	public static final RegistryObject<Block> LANGSTONE = registerBlock("langstone",
 			() -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> CHISELED_LANGSTONE = registerBlock("chiseled_langstone",
@@ -119,6 +123,14 @@ public class ModBlocks {
 	public static final RegistryObject<Block> XAND = registerBlock("xand",
 			() -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)
 					.sound(SoundType.SAND)));
+
+	public static final RegistryObject<Block> ANCIENT_PILLAR = registerBlock("ancient_pillar",
+			() -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.sound(SoundType.STONE)));
+
+	public static final RegistryObject<Block> LANGRITE_NUGGET_BLOCK = registerBlock("langrite_nugget_block",
+			() -> new ModTooltipBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)
+					.sound(SoundType.METAL), "tooltip.undeadremains.langrite_nugget_block"));
 
 	// Advanced Blocks
 

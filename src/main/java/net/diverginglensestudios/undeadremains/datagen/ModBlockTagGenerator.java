@@ -50,7 +50,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 		// NEEDS_IRON_TOOL
 		this.tag(BlockTags.NEEDS_IRON_TOOL)
 				.add(ModBlocks.RAW_LANGRITE_BLOCK.get())
-				.add(ModBlocks.LANGRITE_ORE.get());
+				.add(ModBlocks.LANGRITE_NUGGET_BLOCK.get())
+				.add(ModBlocks.LANGRITE_ORE.get())
+				.add(ModBlocks.DEEP_LANGSTONE_LANGRITE_ORE.get());
 
 		// NEEDS_STONE_TOOL
 		this.tag(BlockTags.NEEDS_STONE_TOOL)

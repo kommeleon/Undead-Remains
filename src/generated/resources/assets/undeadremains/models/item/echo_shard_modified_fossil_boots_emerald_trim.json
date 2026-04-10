@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "undeadremains:item/sculk_shard_modified_fossil_boots",
+    "layer0": "undeadremains:item/echo_shard_modified_fossil_boots",
     "layer1": "minecraft:trims/items/boots_trim_emerald"
   }
 }

@@ -39,7 +39,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 						ModItems.FOSSIL_LEGGINGS.get(),
 						ModItems.FOSSIL_BOOTS.get())
 				.add(ModItems.SCUTE_MODIFIED_FOSSIL_LEGGINGS.get(),
-						ModItems.SCULK_SHARD_MODIFIED_FOSSIL_BOOTS.get(),
+						ModItems.ECHO_SHARD_MODIFIED_FOSSIL_BOOTS.get(),
 						ModItems.CLOCK_MODIFIED_FOSSIL_CHESTPLATE.get())
 				.add(ModItems.RARE_FOSSIL_HELMET.get(),
 						ModItems.RARE_FOSSIL_CHESTPLATE.get(),

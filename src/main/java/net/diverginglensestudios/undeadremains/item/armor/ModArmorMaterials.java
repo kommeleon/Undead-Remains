@@ -53,7 +53,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 	CLOCK_MODIFIED_FOSSIL("clock_modified_fossil", 26, new int[] { 2, 6, 3, 1 }, 25,
 			SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.FOSSIL.get())),
 
-	SCULK_SHARD_MODIFIED_FOSSIL("sculk_shard_modified_fossil", 26, new int[] { 2, 3, 3, (int) 2.5f }, 25,
+	ECHO_SHARD_MODIFIED_FOSSIL("echo_shard_modified_fossil", 26, new int[] { 2, 3, 3, (int) 2.5f }, 25,
 			SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.FOSSIL.get()));
 
 	private final String name;

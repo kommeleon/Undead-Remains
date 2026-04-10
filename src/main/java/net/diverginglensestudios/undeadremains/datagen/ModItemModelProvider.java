@@ -164,9 +164,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 		handheldItem(ModItems.LANGRITE_SHOVEL);
 		handheldItem(ModItems.LANGRITE_HOE);
 		handheldItem(ModItems.METATORBERNITE_SWORDAXE);
-		handheldItem(ModItems.METATORBERNITE_PICKAXE);
-		handheldItem(ModItems.METATORBERNITE_SHOVEL);
-		handheldItem(ModItems.METATORBERNITE_HOE);
 		handheldItem(ModItems.METATORBERNITE_TOOL);
 		handheldItem(ModItems.RARE_FOSSIL_SWORD);
 		handheldItem(ModItems.RARE_FOSSIL_PICKAXE);
@@ -183,7 +180,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		trimmedArmorItem(ModItems.LIGHTNING_ROD_MODIFIED_FOSSIL_HELMET);
 		trimmedArmorItem(ModItems.CLOCK_MODIFIED_FOSSIL_CHESTPLATE);
 		trimmedArmorItem(ModItems.SCUTE_MODIFIED_FOSSIL_LEGGINGS);
-		trimmedArmorItem(ModItems.SCULK_SHARD_MODIFIED_FOSSIL_BOOTS);
+		trimmedArmorItem(ModItems.ECHO_SHARD_MODIFIED_FOSSIL_BOOTS);
 		trimmedArmorItem(ModItems.FOSSIL_BOOTS);
 		trimmedArmorItem(ModItems.RARE_FOSSIL_HELMET);
 		trimmedArmorItem(ModItems.RARE_FOSSIL_CHESTPLATE);

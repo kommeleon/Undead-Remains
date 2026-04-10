@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "undeadremains:block/deep_langstone_langrite_ore"
+  }
+}

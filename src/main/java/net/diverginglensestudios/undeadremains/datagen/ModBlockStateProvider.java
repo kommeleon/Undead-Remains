@@ -59,6 +59,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		blockWithItem(ModBlocks.LANGRITE_BLOCK);
 		blockWithItem(ModBlocks.RAW_LANGRITE_BLOCK);
 		blockWithItem(ModBlocks.LANGRITE_ORE);
+		blockWithItem(ModBlocks.DEEP_LANGSTONE_LANGRITE_ORE);
 		blockWithItem(ModBlocks.ASH_PLANKS);
 		blockWithItem(ModBlocks.CALIPO_PLANKS);
 		blockWithItem(ModBlocks.FOSSIL_LUCKY_BLOCK);
@@ -69,6 +70,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		blockWithItem(ModBlocks.SUPREME_TILES);
 		blockWithItem(ModBlocks.CHISELED_SUPREME_BRICKS);
 		blockWithItem(ModBlocks.XAND);
+		blockWithItem(ModBlocks.LANGRITE_NUGGET_BLOCK);
 
 		// BlockItem
 		blockItem(ModBlocks.LIVING_LANGSTONE);

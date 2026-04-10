@@ -1,6 +1,8 @@
 {
   "values": [
     "undeadremains:raw_langrite_block",
-    "undeadremains:langrite_ore"
+    "undeadremains:langrite_nugget_block",
+    "undeadremains:langrite_ore",
+    "undeadremains:deep_langstone_langrite_ore"
   ]
 }

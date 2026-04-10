@@ -142,7 +142,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		customSmithing(pWriter, /* template */ModItems.FOSSIL.get(), /* base */ModItems.FOSSIL_BOOTS.get(),
 				/* addition */Items.ECHO_SHARD,
 				/* category */RecipeCategory.COMBAT,
-				/* result */ModItems.SCULK_SHARD_MODIFIED_FOSSIL_BOOTS.get(),
+				/* result */ModItems.ECHO_SHARD_MODIFIED_FOSSIL_BOOTS.get(),
 				/* unlock item */Items.ECHO_SHARD);
 		customSmithing(pWriter, /* template */ModItems.FOSSIL.get(), /* base */ModItems.THE_FOSSILS_EYE.get(),
 				/* addition */Items.QUARTZ,

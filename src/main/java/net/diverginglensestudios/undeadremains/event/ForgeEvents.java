@@ -32,7 +32,7 @@ public class ForgeEvents {
 		if (boots == null || boots.isEmpty())
 			return;
 
-		if (!boots.is(ModItems.SCULK_SHARD_MODIFIED_FOSSIL_BOOTS.get()))
+		if (!boots.is(ModItems.ECHO_SHARD_MODIFIED_FOSSIL_BOOTS.get()))
 			return;
 
 		GameEvent vanillaType = event.getVanillaEvent();

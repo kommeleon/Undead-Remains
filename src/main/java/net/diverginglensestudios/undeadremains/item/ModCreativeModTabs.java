@@ -69,7 +69,7 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModItems.LIGHTNING_ROD_MODIFIED_FOSSIL_HELMET.get());
 						pOutput.accept(ModItems.CLOCK_MODIFIED_FOSSIL_CHESTPLATE.get());
 						pOutput.accept(ModItems.SCUTE_MODIFIED_FOSSIL_LEGGINGS.get());
-						pOutput.accept(ModItems.SCULK_SHARD_MODIFIED_FOSSIL_BOOTS.get());
+						pOutput.accept(ModItems.ECHO_SHARD_MODIFIED_FOSSIL_BOOTS.get());
 						pOutput.accept(ModItems.GOLD_BLOCK_MODIFIED_FOSSILIZED_DRUMSTICK.get());
 						pOutput.accept(ModItems.THE_QUARTZ_MODIFIED_FOSSILS_EYE.get());
 
@@ -118,6 +118,9 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModBlocks.LANGRITE_BLOCK.get());
 						pOutput.accept(ModBlocks.RAW_LANGRITE_BLOCK.get());
 						pOutput.accept(ModBlocks.LANGRITE_ORE.get());
+						pOutput.accept(ModBlocks.DEEP_LANGSTONE_LANGRITE_ORE.get());
+						pOutput.accept(ModItems.LANGRITE_NUGGET.get());
+						pOutput.accept(ModBlocks.LANGRITE_NUGGET_BLOCK.get());
 
 						pOutput.accept(ModItems.LANGRITE_SWORD.get());
 						pOutput.accept(ModItems.LANGRITE_PICKAXE.get());
@@ -164,6 +167,7 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModBlocks.POLISHED_DEEP_LANGSTONE_WALL.get());
 
 						pOutput.accept(ModBlocks.XAND.get());
+						pOutput.accept(ModBlocks.ANCIENT_PILLAR.get());
 
 						pOutput.accept(ModItems.SUNGLASSES.get());
 

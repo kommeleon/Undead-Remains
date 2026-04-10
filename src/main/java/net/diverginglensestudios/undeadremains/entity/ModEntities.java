@@ -76,7 +76,7 @@ public class ModEntities {
 	public static final RegistryObject<EntityType<HammerZombieEntity>> HAMMER_ZOMBIE = ENTITY_TYPES.register(
 			"hammer_zombie",
 			() -> EntityType.Builder.<HammerZombieEntity>of(HammerZombieEntity::new, MobCategory.MONSTER)
-					.sized(0.6f, 2f).build("hammer_zombie"));
+					.sized(0.6f, 2.25f).build("hammer_zombie"));
 
 	public static final RegistryObject<EntityType<FourEyedXanarianEntity>> FOUR_EYED_XANARIAN = ENTITY_TYPES
 			.register("four_eyed_xanarian",

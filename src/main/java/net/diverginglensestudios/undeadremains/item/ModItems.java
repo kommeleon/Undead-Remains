@@ -10,7 +10,6 @@ package net.diverginglensestudios.undeadremains.item;
 import net.diverginglensestudios.undeadremains.UndeadRemains;
 import net.diverginglensestudios.undeadremains.block.ModBlocks;
 import net.diverginglensestudios.undeadremains.entity.ModEntities;
-import net.diverginglensestudios.undeadremains.entity.custom.Other.MetaturboniteGrenadeProjectileEntity;
 import net.diverginglensestudios.undeadremains.entity.custom.Other.ModBoatEntity;
 import net.diverginglensestudios.undeadremains.item.armor.ModArmorMaterials;
 import net.diverginglensestudios.undeadremains.item.armor.ModSimpleArmorItem;
@@ -19,9 +18,6 @@ import net.diverginglensestudios.undeadremains.item.custom.*;
 import net.diverginglensestudios.undeadremains.sound.ModSounds;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -54,12 +50,14 @@ public class ModItems {
 			() -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> LANGRITE_INGOT = ITEMS.register("langrite_ingot",
 			() -> new Item(new Item.Properties()));
+	public static final RegistryObject<Item> LANGRITE_NUGGET = ITEMS.register("langrite_nugget",
+			() -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> EMPTY_FUEL_CELL = ITEMS.register("empty_fuel_cell",
 			() -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> XANARANHA_HORN = ITEMS.register("xanaranha_horn",
 			() -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> XANARANHA_HORN_ON_A_STICK = ITEMS.register("xanaranha_horn_on_a_stick",
-			() -> new Item(new Item.Properties()));
+			() -> new Item(new Item.Properties().stacksTo(1)));
 
 	// Advanced Items
 	public static final RegistryObject<Item> METATORBERNITE_GRENADE = ITEMS.register("metatorbernite_grenade",
@@ -174,7 +172,7 @@ public class ModItems {
 			() -> new HoeItem(ModToolTiers.LANGRITE, 2 - 1, 5 - 4, new Item.Properties()));
 
 	public static final RegistryObject<Item> HARVESTER = ITEMS.register("harvester",
-			() -> new SwordItem(ModToolTiers.LANGRITE, 20 - 1, 0.35f - 4,
+			() -> new SwordItem(ModToolTiers.LANGRITE, 20 - 1, 1 - 4,
 					new Item.Properties().rarity(Rarity.RARE)));
 
 	public static final RegistryObject<Item> SPIKE_BAT = ITEMS.register("spike_bat",
@@ -278,9 +276,9 @@ public class ModItems {
 			"scute_modified_fossil_leggings",
 			() -> new ModSimpleArmorItem(ModArmorMaterials.SCUTE_MODIFIED_FOSSIL, ArmorItem.Type.LEGGINGS,
 					new Item.Properties()));
-	public static final RegistryObject<Item> SCULK_SHARD_MODIFIED_FOSSIL_BOOTS = ITEMS.register(
-			"sculk_shard_modified_fossil_boots",
-			() -> new ModSimpleArmorItem(ModArmorMaterials.SCULK_SHARD_MODIFIED_FOSSIL,
+	public static final RegistryObject<Item> ECHO_SHARD_MODIFIED_FOSSIL_BOOTS = ITEMS.register(
+			"echo_shard_modified_fossil_boots",
+			() -> new ModSimpleArmorItem(ModArmorMaterials.ECHO_SHARD_MODIFIED_FOSSIL,
 					ArmorItem.Type.BOOTS, new Item.Properties()));
 
 	// Saplings
@@ -326,7 +324,8 @@ public class ModItems {
 	public static final RegistryObject<Item> HAMMER_ZOMBIE_SPAWN_EGG = ITEMS.register("hammer_zombie_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntities.HAMMER_ZOMBIE, 0x382e33, 0x417536, new Item.Properties()));
 
-	public static final RegistryObject<Item> FOUR_EYED_XANARIAN_SPAWN_EGG = ITEMS.register("four_eyed_xanarian_spawn_egg",
+	public static final RegistryObject<Item> FOUR_EYED_XANARIAN_SPAWN_EGG = ITEMS.register(
+			"four_eyed_xanarian_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntities.FOUR_EYED_XANARIAN, 0xce141e, 0x717212, new Item.Properties()));
 
 	public static final RegistryObject<Item> XANARIAN_SPAWN_EGG = ITEMS.register("xanarian_spawn_egg",

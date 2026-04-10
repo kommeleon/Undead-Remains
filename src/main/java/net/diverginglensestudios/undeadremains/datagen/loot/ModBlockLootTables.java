@@ -115,6 +115,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 		this.dropSelf(ModBlocks.METATORBERNITE_ENRICHER_CONTROLLER.get());
 		this.dropSelf(ModBlocks.METATORBERNITE_ENRICHER_PART.get());
 		this.dropSelf(ModBlocks.STRUCTURE_EXTENDER_BLOCK.get());
+		this.dropSelf(ModBlocks.XAND.get());
+		this.dropSelf(ModBlocks.ANCIENT_PILLAR.get());
+		this.dropSelf(ModBlocks.LANGRITE_NUGGET_BLOCK.get());
 
 		this.dropOther(ModBlocks.CALIPO_BERRY_VINE.get(), Items.AIR);
 
@@ -152,6 +155,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 		this.add(ModBlocks.LANGRITE_ORE.get(),
 				block -> createNormalOreDrops(ModBlocks.LANGRITE_ORE.get(), ModItems.RAW_LANGRITE.get(),
+						1, 3));
+
+		this.add(ModBlocks.DEEP_LANGSTONE_LANGRITE_ORE.get(),
+				block -> createNormalOreDrops(ModBlocks.DEEP_LANGSTONE_LANGRITE_ORE.get(), ModItems.RAW_LANGRITE.get(),
 						1, 3));
 
 		// Slabs

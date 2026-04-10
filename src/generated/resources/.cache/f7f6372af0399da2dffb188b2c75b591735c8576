@@ -1,4 +1,4 @@
-// 1.20.1	2026-03-01T09:55:30.4650737	Tags for minecraft:item mod id undeadremains
+// 1.20.1	2026-04-10T21:52:23.59252	Tags for minecraft:item mod id undeadremains
 3fae3be636e2bd160f391e3c24a7acdedd18038e data/forge/tags/items/armors.json
 e9abe6c5dd392b77ac2917981c74dd6ae6ff5035 data/forge/tags/items/armors/boots.json
 7caddb7256f43b18a5b956bca19f140cfb8d3e65 data/forge/tags/items/armors/chestplate.json
@@ -51,7 +51,7 @@ acf1ed49946f239343ec34ed5948be0a640aaf6a data/minecraft/tags/items/stairs.json
 236beae93f315a607f75a47e75ccfe507fa9c2fb data/minecraft/tags/items/swords.json
 83578e1544cb670b8d8968b8f3f53c77c4d6add4 data/minecraft/tags/items/tools.json
 37ce0bc3495733fb12decc1bfaeaaaaf73001c57 data/minecraft/tags/items/trapdoors.json
-94108ba407c1ebe4a50b127554dae6f20085f13e data/minecraft/tags/items/trimmable_armor.json
+2722717ffbb409688be1ecae61c943082e8cbd3c data/minecraft/tags/items/trimmable_armor.json
 b8d1da1e750f3f19ec1f09227ff07483def45e22 data/minecraft/tags/items/walls.json
 96460e4bd0e15a6a437c7a44848dcdbde4f8eefd data/undeadremains/tags/items/ash_wood.json
 b9d4274bf780829a864d52df8098fc4cbaceace1 data/undeadremains/tags/items/calipo_wood.json
