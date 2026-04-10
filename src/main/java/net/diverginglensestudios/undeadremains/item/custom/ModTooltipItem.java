@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
@@ -12,7 +13,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 public class ModTooltipItem extends Item {
-    
+
     private final String tooltipKey;
 
     public ModTooltipItem(Properties properties, String tooltipKey) {
@@ -21,8 +22,9 @@ public class ModTooltipItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack,@Nullable Level level,List<Component> tooltipComponents,TooltipFlag isAdvanced) {
-        tooltipComponents.add(Component.translatable(this.tooltipKey));
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents,
+            TooltipFlag isAdvanced) {
+        tooltipComponents.add(Component.translatable(this.tooltipKey).withStyle(ChatFormatting.GRAY));
         super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
     }
 }

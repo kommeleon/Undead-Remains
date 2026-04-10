@@ -22,18 +22,19 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagGenerator extends BlockTagsProvider {
-	public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+	public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			@Nullable ExistingFileHelper existingFileHelper) {
 		super(output, lookupProvider, UndeadRemains.MOD_ID, existingFileHelper);
 	}
 
 	@Override
 	protected void addTags(HolderLookup.Provider pProvider) {
 
-//LANGSTONE_REPLACEABLES
+		// LANGSTONE_REPLACEABLES
 		this.tag(ModTags.Blocks.LANGSTONE_REPLACEABLES)
 				.add(ModBlocks.LANGSTONE.get());
 
-//MINEABLE_WITH_PICKAXE
+		// MINEABLE_WITH_PICKAXE
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(ModBlocks.LANGSTONE.get())
 				.add(ModBlocks.DEEP_LANGSTONE.get())
@@ -46,13 +47,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 				.add(ModBlocks.FOSSIL_LUCKY_BLOCK.get())
 				.add(ModBlocks.METATORBERNITE_ORE.get());
 
-
-//NEEDS_IRON_TOOL
+		// NEEDS_IRON_TOOL
 		this.tag(BlockTags.NEEDS_IRON_TOOL)
 				.add(ModBlocks.RAW_LANGRITE_BLOCK.get())
 				.add(ModBlocks.LANGRITE_ORE.get());
 
-//NEEDS_STONE_TOOL
+		// NEEDS_STONE_TOOL
 		this.tag(BlockTags.NEEDS_STONE_TOOL)
 				.add(ModBlocks.RAW_FOSSIL_BLOCK.get())
 				.add(ModBlocks.FOSSIL_ORE.get())
@@ -60,8 +60,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 				.add(ModBlocks.METATORBERNITE_BLOCK.get())
 				.add(ModBlocks.DEEP_LANGSTONE.get());
 
-
-//LOGS_THAT_BURN
+		// LOGS_THAT_BURN
 		this.tag(BlockTags.LOGS_THAT_BURN)
 				.add(ModBlocks.CALIPO_LOG.get())
 				.add(ModBlocks.CALIPO_WOOD.get())
@@ -72,7 +71,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 				.add(ModBlocks.STRIPPED_ASH_LOG.get())
 				.add(ModBlocks.STRIPPED_ASH_WOOD.get());
 
-//LOGS
+		// LOGS
 		this.tag(BlockTags.LOGS)
 				.add(ModBlocks.CALIPO_LOG.get())
 				.add(ModBlocks.CALIPO_WOOD.get())
@@ -83,48 +82,48 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 				.add(ModBlocks.STRIPPED_ASH_LOG.get())
 				.add(ModBlocks.STRIPPED_ASH_WOOD.get());
 
-//PLANKS
+		// PLANKS
 		this.tag(BlockTags.PLANKS)
 				.add(ModBlocks.CALIPO_PLANKS.get())
 				.add(ModBlocks.ASH_PLANKS.get());
 
-//STAIRS
+		// STAIRS
 		this.tag(BlockTags.STAIRS)
 				.add(ModBlocks.ASH_STAIRS.get())
 				.add(ModBlocks.CALIPO_STAIRS.get())
 				.add(ModBlocks.FOSSIL_STAIRS.get());
 
-//SLABS
+		// SLABS
 		this.tag(BlockTags.SLABS)
 				.add(ModBlocks.ASH_SLAB.get())
 				.add(ModBlocks.CALIPO_SLAB.get())
 				.add(ModBlocks.FOSSIL_SLAB.get());
 
-//FENCES
+		// FENCES
 		this.tag(BlockTags.FENCES)
 				.add(ModBlocks.ASH_FENCE.get())
 				.add(ModBlocks.CALIPO_FENCE.get())
 				.add(ModBlocks.FOSSIL_FENCE.get());
 
-//FENCE_GATES
+		// FENCE_GATES
 		this.tag(BlockTags.FENCE_GATES)
 				.add(ModBlocks.ASH_FENCE_GATE.get())
 				.add(ModBlocks.CALIPO_FENCE_GATE.get())
 				.add(ModBlocks.FOSSIL_FENCE_GATE.get());
 
-//BUTTONS
+		// BUTTONS
 		this.tag(BlockTags.BUTTONS)
 				.add(ModBlocks.ASH_BUTTON.get())
 				.add(ModBlocks.CALIPO_BUTTON.get())
 				.add(ModBlocks.FOSSIL_BUTTON.get());
 
-//DOORS
+		// DOORS
 		this.tag(BlockTags.DOORS)
 				.add(ModBlocks.ASH_DOOR.get())
 				.add(ModBlocks.CALIPO_DOOR.get())
 				.add(ModBlocks.FOSSIL_DOOR.get());
 
-//WALLS
+		// WALLS
 		this.tag(BlockTags.WALLS)
 				.add(ModBlocks.LANGSTONE_WALL.get())
 				.add(ModBlocks.POLISHED_LANGSTONE_WALL.get())
@@ -134,47 +133,50 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 				.add(ModBlocks.DEEP_LANGSTONE_BRICK_WALL.get())
 				.add(ModBlocks.POLISHED_DEEP_LANGSTONE_WALL.get());
 
-//TRAPDOORS
+		// TRAPDOORS
 		this.tag(BlockTags.TRAPDOORS)
 				.add(ModBlocks.ASH_TRAPDOOR.get())
 				.add(ModBlocks.CALIPO_TRAPDOOR.get())
 				.add(ModBlocks.FOSSIL_TRAPDOOR.get());
 
-//ALL_HANGING_SIGNS
+		// ALL_HANGING_SIGNS
 		this.tag(BlockTags.ALL_HANGING_SIGNS)
 				.add(ModBlocks.ASH_HANGING_SIGN.get())
 				.add(ModBlocks.CALIPO_HANGING_SIGN.get());
 
-//SIGNS
+		// SIGNS
 		this.tag(BlockTags.SIGNS)
 				.add(ModBlocks.ASH_SIGN.get())
 				.add(ModBlocks.CALIPO_SIGN.get());
 
-
-//LEAVES
+		// LEAVES
 		this.tag(BlockTags.LEAVES)
 				.add(ModBlocks.CALIPO_LEAVES.get())
 				.add(ModBlocks.ASH_LEAVES.get())
 				.add(ModBlocks.CALIPO_LEAVES.get());
 
-//DIRT
+		// SAND
+		this.tag(BlockTags.SAND)
+				.add(ModBlocks.XAND.get());
+
+		// DIRT
 		this.tag(BlockTags.DIRT)
 				.add(ModBlocks.LIVING_LANGSTONE.get());
 
-//STORAGE_BLOCKS
+		// STORAGE_BLOCKS
 		this.tag(Tags.Blocks.STORAGE_BLOCKS)
 				.add(ModBlocks.METATORBERNITE_BLOCK.get())
 				.add(ModBlocks.LANGRITE_BLOCK.get())
 				.add(ModBlocks.FOSSIL_BLOCK.get());
 
-//ORES
+		// ORES
 		this.tag(Tags.Blocks.ORES)
 				.add(ModBlocks.FOSSIL_ORE.get())
 				.add(ModBlocks.LANGRITE_ORE.get())
 				.add(ModBlocks.DEEPSLATE_FOSSIL_ORE.get())
 				.add(ModBlocks.METATORBERNITE_ORE.get());
 
-//CUSTOM FORGE TAGS
+		// CUSTOM FORGE TAGS
 
 		this.tag(BlockTags.create(new ResourceLocation("forge", "storage_blocks/fossil")))
 				.add(ModBlocks.FOSSIL_BLOCK.get());
@@ -186,9 +188,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 		this.tag(BlockTags.create(new ResourceLocation("forge", "storage_blocks/raw_fossil")))
 				.add(ModBlocks.RAW_FOSSIL_BLOCK.get());
 
-//CUSTOM MINECRAFT TAGS
+		// CUSTOM MINECRAFT TAGS
 
 		this.tag(BlockTags.create(new ResourceLocation("minecraft", "ash_logs")))
 				.add(ModBlocks.STRIPPED_ASH_WOOD.get());
 
-	}}
+	}
+}

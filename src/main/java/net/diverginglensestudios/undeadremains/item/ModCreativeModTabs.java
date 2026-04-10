@@ -163,6 +163,8 @@ public class ModCreativeModTabs {
 						pOutput.accept(ModBlocks.POLISHED_DEEP_LANGSTONE_SLAB.get());
 						pOutput.accept(ModBlocks.POLISHED_DEEP_LANGSTONE_WALL.get());
 
+						pOutput.accept(ModBlocks.XAND.get());
+
 						pOutput.accept(ModItems.SUNGLASSES.get());
 
 						pOutput.accept(ModItems.THE_FOSSILS_EYE.get());

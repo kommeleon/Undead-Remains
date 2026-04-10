@@ -41,7 +41,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		//BlockWithItem
+		// BlockWithItem
 		blockWithItem(ModBlocks.FOSSIL_BLOCK);
 		blockWithItem(ModBlocks.LANGSTONE_BRICKS);
 		blockWithItem(ModBlocks.LANGSTONE);
@@ -68,16 +68,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		blockWithItem(ModBlocks.SUPREME_BRICKS);
 		blockWithItem(ModBlocks.SUPREME_TILES);
 		blockWithItem(ModBlocks.CHISELED_SUPREME_BRICKS);
+		blockWithItem(ModBlocks.XAND);
 
-		//BlockItem
+		// BlockItem
 		blockItem(ModBlocks.LIVING_LANGSTONE);
 
-		//Saplings
+		// Saplings
 		saplingBlock(ModBlocks.ASH_SAPLING);
 		saplingBlock(ModBlocks.CALIPO_SAPLING);
 
 		glowVineBlock(ModBlocks.CALIPO_BERRY_VINE);
-
 
 		simpleBlockWithItem(ModBlocks.FOSSIL_POLISHER.get(),
 				new ModelFile.UncheckedModelFile(modLoc("block/fossil_polisher")));
@@ -89,31 +89,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				"living_langstone",
 				modLoc("block/living_langstone_side"),
 				modLoc("block/langstone"),
-				modLoc("block/living_langstone_top")
-		));
-
+				modLoc("block/living_langstone_top")));
 
 		logBlock(((RotatedPillarBlock) ModBlocks.ASH_LOG.get()));
 		logBlock(((RotatedPillarBlock) ModBlocks.LANGSTONE_PILAR.get()));
 		logBlock(((RotatedPillarBlock) ModBlocks.SUPREME_PILAR.get()));
 		logBlock(((RotatedPillarBlock) ModBlocks.CALIPO_LOG.get()));
 
-		axisBlock(((RotatedPillarBlock) ModBlocks.ASH_WOOD.get()), blockTexture(ModBlocks.ASH_LOG.get()), blockTexture(ModBlocks.ASH_LOG.get()));
-		axisBlock(((RotatedPillarBlock) ModBlocks.CALIPO_WOOD.get()), blockTexture(ModBlocks.CALIPO_LOG.get()), blockTexture(ModBlocks.CALIPO_LOG.get()));
+		axisBlock(((RotatedPillarBlock) ModBlocks.ASH_WOOD.get()), blockTexture(ModBlocks.ASH_LOG.get()),
+				blockTexture(ModBlocks.ASH_LOG.get()));
+		axisBlock(((RotatedPillarBlock) ModBlocks.CALIPO_WOOD.get()), blockTexture(ModBlocks.CALIPO_LOG.get()),
+				blockTexture(ModBlocks.CALIPO_LOG.get()));
 
-		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ASH_LOG.get()), blockTexture(ModBlocks.STRIPPED_ASH_LOG.get()),
+		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ASH_LOG.get()),
+				blockTexture(ModBlocks.STRIPPED_ASH_LOG.get()),
 				new ResourceLocation(UndeadRemains.MOD_ID, "block/stripped_ash_log_top"));
-		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CALIPO_LOG.get()), blockTexture(ModBlocks.STRIPPED_CALIPO_LOG.get()),
+		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CALIPO_LOG.get()),
+				blockTexture(ModBlocks.STRIPPED_CALIPO_LOG.get()),
 				new ResourceLocation(UndeadRemains.MOD_ID, "block/stripped_calipo_log_top"));
 
-		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ASH_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ASH_LOG.get()),
+		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ASH_WOOD.get()),
+				blockTexture(ModBlocks.STRIPPED_ASH_LOG.get()),
 				blockTexture(ModBlocks.STRIPPED_ASH_LOG.get()));
-		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CALIPO_WOOD.get()), blockTexture(ModBlocks.STRIPPED_CALIPO_LOG.get()),
+		axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CALIPO_WOOD.get()),
+				blockTexture(ModBlocks.STRIPPED_CALIPO_LOG.get()),
 				blockTexture(ModBlocks.STRIPPED_CALIPO_LOG.get()));
 
 		leavesBlock(ModBlocks.ASH_LEAVES);
 		leavesBlock(ModBlocks.CALIPO_LEAVES);
-		//BlockItem
+		// BlockItem
 
 		blockItem(ModBlocks.LANGSTONE_PILAR);
 		blockItem(ModBlocks.SUPREME_PILAR);
@@ -126,59 +130,86 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		blockItem(ModBlocks.STRIPPED_CALIPO_LOG);
 		blockItem(ModBlocks.STRIPPED_CALIPO_WOOD);
 
-		//Flowers
-		simpleBlockWithItem(ModBlocks.XANAS_FLOWER.get(), models().cross(blockTexture(ModBlocks.XANAS_FLOWER.get()).getPath(),
-				blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.POTTED_XANAS_FLOWER.get(), models().singleTexture("potted_xanas_flower", new ResourceLocation("flower_pot_cross"), "plant",
-				blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.ROXA_FLOWER.get(), models().cross(blockTexture(ModBlocks.ROXA_FLOWER.get()).getPath(),
-				blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.POTTED_ROXA_FLOWER.get(), models().singleTexture("potted_roxa_flower", new ResourceLocation("flower_pot_cross"), "plant",
-				blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.LYXOR_FLOWER.get(), models().cross(blockTexture(ModBlocks.LYXOR_FLOWER.get()).getPath(),
-				blockTexture(ModBlocks.LYXOR_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.XELKS_FLOWER.get(), models().cross(blockTexture(ModBlocks.XELKS_FLOWER.get()).getPath(),
-				blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
-		simpleBlockWithItem(ModBlocks.POTTED_XELKS_FLOWER.get(), models().singleTexture("potted_xelks_flower", new ResourceLocation("flower_pot_cross"), "plant",
-				blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
+		// Flowers
+		simpleBlockWithItem(ModBlocks.XANAS_FLOWER.get(),
+				models().cross(blockTexture(ModBlocks.XANAS_FLOWER.get()).getPath(),
+						blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.POTTED_XANAS_FLOWER.get(),
+				models().singleTexture("potted_xanas_flower", new ResourceLocation("flower_pot_cross"), "plant",
+						blockTexture(ModBlocks.XANAS_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.ROXA_FLOWER.get(),
+				models().cross(blockTexture(ModBlocks.ROXA_FLOWER.get()).getPath(),
+						blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.POTTED_ROXA_FLOWER.get(),
+				models().singleTexture("potted_roxa_flower", new ResourceLocation("flower_pot_cross"), "plant",
+						blockTexture(ModBlocks.ROXA_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.LYXOR_FLOWER.get(),
+				models().cross(blockTexture(ModBlocks.LYXOR_FLOWER.get()).getPath(),
+						blockTexture(ModBlocks.LYXOR_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.XELKS_FLOWER.get(),
+				models().cross(blockTexture(ModBlocks.XELKS_FLOWER.get()).getPath(),
+						blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.POTTED_XELKS_FLOWER.get(),
+				models().singleTexture("potted_xelks_flower", new ResourceLocation("flower_pot_cross"), "plant",
+						blockTexture(ModBlocks.XELKS_FLOWER.get())).renderType("cutout"));
 
-		simpleBlockWithItem(ModBlocks.CALIPO_GRASS.get(), models().cross(blockTexture(ModBlocks.CALIPO_GRASS.get()).getPath(),
-				blockTexture(ModBlocks.CALIPO_GRASS.get())).renderType("cutout"));
+		simpleBlockWithItem(ModBlocks.CALIPO_GRASS.get(),
+				models().cross(blockTexture(ModBlocks.CALIPO_GRASS.get()).getPath(),
+						blockTexture(ModBlocks.CALIPO_GRASS.get())).renderType("cutout"));
 
-		//DifferentlyShapedBlocks
+		// DifferentlyShapedBlocks
 		signBlock(((StandingSignBlock) ModBlocks.ASH_SIGN.get()), ((WallSignBlock) ModBlocks.ASH_WALL_SIGN.get()),
 				blockTexture(ModBlocks.ASH_PLANKS.get()));
 
 		signBlock(((StandingSignBlock) ModBlocks.CALIPO_SIGN.get()), ((WallSignBlock) ModBlocks.CALIPO_WALL_SIGN.get()),
 				blockTexture(ModBlocks.CALIPO_PLANKS.get()));
 
-		hangingSignBlock(ModBlocks.ASH_HANGING_SIGN.get(), ModBlocks.ASH_WALL_HANGING_SIGN.get(),blockTexture(ModBlocks.ASH_PLANKS.get()));
-		hangingSignBlock(ModBlocks.CALIPO_HANGING_SIGN.get(), ModBlocks.CALIPO_WALL_HANGING_SIGN.get(),blockTexture(ModBlocks.CALIPO_PLANKS.get()));
+		hangingSignBlock(ModBlocks.ASH_HANGING_SIGN.get(), ModBlocks.ASH_WALL_HANGING_SIGN.get(),
+				blockTexture(ModBlocks.ASH_PLANKS.get()));
+		hangingSignBlock(ModBlocks.CALIPO_HANGING_SIGN.get(), ModBlocks.CALIPO_WALL_HANGING_SIGN.get(),
+				blockTexture(ModBlocks.CALIPO_PLANKS.get()));
 
 		wallBlock(((WallBlock) ModBlocks.FOSSIL_WALL.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
 		wallBlock(((WallBlock) ModBlocks.LANGSTONE_WALL.get()), blockTexture(ModBlocks.LANGSTONE.get()));
-		wallBlock(((WallBlock) ModBlocks.POLISHED_LANGSTONE_WALL.get()), blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
+		wallBlock(((WallBlock) ModBlocks.POLISHED_LANGSTONE_WALL.get()),
+				blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
 		wallBlock(((WallBlock) ModBlocks.LANGSTONE_BRICK_WALL.get()), blockTexture(ModBlocks.LANGSTONE_BRICKS.get()));
-		wallBlock(((WallBlock) ModBlocks.DEEP_LANGSTONE_BRICK_WALL.get()), blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
+		wallBlock(((WallBlock) ModBlocks.DEEP_LANGSTONE_BRICK_WALL.get()),
+				blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
 		wallBlock(((WallBlock) ModBlocks.DEEP_LANGSTONE_WALL.get()), blockTexture(ModBlocks.DEEP_LANGSTONE.get()));
-		wallBlock(((WallBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_WALL.get()), blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
+		wallBlock(((WallBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_WALL.get()),
+				blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
 
 		stairsBlock(((StairBlock) ModBlocks.ASH_STAIRS.get()), blockTexture(ModBlocks.ASH_PLANKS.get()));
-		stairsBlock(((StairBlock) ModBlocks.POLISHED_LANGSTONE_STAIRS.get()), blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
-		stairsBlock(((StairBlock) ModBlocks.LANGSTONE_BRICK_STAIRS.get()), blockTexture(ModBlocks.LANGSTONE_BRICKS.get()));
+		stairsBlock(((StairBlock) ModBlocks.POLISHED_LANGSTONE_STAIRS.get()),
+				blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
+		stairsBlock(((StairBlock) ModBlocks.LANGSTONE_BRICK_STAIRS.get()),
+				blockTexture(ModBlocks.LANGSTONE_BRICKS.get()));
 		stairsBlock(((StairBlock) ModBlocks.LANGSTONE_STAIRS.get()), blockTexture(ModBlocks.LANGSTONE.get()));
-		stairsBlock(((StairBlock) ModBlocks.DEEP_LANGSTONE_BRICK_STAIRS.get()), blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
+		stairsBlock(((StairBlock) ModBlocks.DEEP_LANGSTONE_BRICK_STAIRS.get()),
+				blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
 		stairsBlock(((StairBlock) ModBlocks.DEEP_LANGSTONE_STAIRS.get()), blockTexture(ModBlocks.DEEP_LANGSTONE.get()));
-		stairsBlock(((StairBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_STAIRS.get()), blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
+		stairsBlock(((StairBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_STAIRS.get()),
+				blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
 
-		slabBlock(((SlabBlock) ModBlocks.ASH_SLAB.get()), blockTexture(ModBlocks.ASH_PLANKS.get()), blockTexture(ModBlocks.ASH_PLANKS.get()));
-		slabBlock(((SlabBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_SLAB.get()), blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()), blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
-		slabBlock(((SlabBlock) ModBlocks.DEEP_LANGSTONE_SLAB.get()), blockTexture(ModBlocks.DEEP_LANGSTONE.get()), blockTexture(ModBlocks.DEEP_LANGSTONE.get()));
-		slabBlock(((SlabBlock) ModBlocks.DEEP_LANGSTONE_BRICK_SLAB.get()), blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()), blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
-		slabBlock(((SlabBlock) ModBlocks.LANGSTONE_SLAB.get()), blockTexture(ModBlocks.LANGSTONE.get()), blockTexture(ModBlocks.LANGSTONE.get()));
-		slabBlock(((SlabBlock) ModBlocks.POLISHED_LANGSTONE_SLAB.get()), blockTexture(ModBlocks.POLISHED_LANGSTONE.get()), blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
-		slabBlock(((SlabBlock) ModBlocks.LANGSTONE_BRICK_SLAB.get()), blockTexture(ModBlocks.LANGSTONE_BRICKS.get()), blockTexture(ModBlocks.LANGSTONE_BRICKS.get()));
-		slabBlock(((SlabBlock) ModBlocks.CALIPO_SLAB.get()), blockTexture(ModBlocks.CALIPO_PLANKS.get()), blockTexture(ModBlocks.CALIPO_PLANKS.get()));
+		slabBlock(((SlabBlock) ModBlocks.ASH_SLAB.get()), blockTexture(ModBlocks.ASH_PLANKS.get()),
+				blockTexture(ModBlocks.ASH_PLANKS.get()));
+		slabBlock(((SlabBlock) ModBlocks.POLISHED_DEEP_LANGSTONE_SLAB.get()),
+				blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()),
+				blockTexture(ModBlocks.POLISHED_DEEP_LANGSTONE.get()));
+		slabBlock(((SlabBlock) ModBlocks.DEEP_LANGSTONE_SLAB.get()), blockTexture(ModBlocks.DEEP_LANGSTONE.get()),
+				blockTexture(ModBlocks.DEEP_LANGSTONE.get()));
+		slabBlock(((SlabBlock) ModBlocks.DEEP_LANGSTONE_BRICK_SLAB.get()),
+				blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()),
+				blockTexture(ModBlocks.DEEP_LANGSTONE_BRICKS.get()));
+		slabBlock(((SlabBlock) ModBlocks.LANGSTONE_SLAB.get()), blockTexture(ModBlocks.LANGSTONE.get()),
+				blockTexture(ModBlocks.LANGSTONE.get()));
+		slabBlock(((SlabBlock) ModBlocks.POLISHED_LANGSTONE_SLAB.get()),
+				blockTexture(ModBlocks.POLISHED_LANGSTONE.get()), blockTexture(ModBlocks.POLISHED_LANGSTONE.get()));
+		slabBlock(((SlabBlock) ModBlocks.LANGSTONE_BRICK_SLAB.get()), blockTexture(ModBlocks.LANGSTONE_BRICKS.get()),
+				blockTexture(ModBlocks.LANGSTONE_BRICKS.get()));
+		slabBlock(((SlabBlock) ModBlocks.CALIPO_SLAB.get()), blockTexture(ModBlocks.CALIPO_PLANKS.get()),
+				blockTexture(ModBlocks.CALIPO_PLANKS.get()));
 
 		buttonBlock(((ButtonBlock) ModBlocks.ASH_BUTTON.get()), blockTexture(ModBlocks.ASH_PLANKS.get()));
 
@@ -190,7 +221,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		fenceGateBlock(((FenceGateBlock) ModBlocks.ASH_FENCE_GATE.get()), blockTexture(ModBlocks.ASH_PLANKS.get()));
 
 		doorBlockWithRenderType(((DoorBlock) ModBlocks.ASH_DOOR.get()),
-				modLoc("block/ash_door_bottom"),modLoc("block/ash_door_top"), "cutout");
+				modLoc("block/ash_door_bottom"), modLoc("block/ash_door_top"), "cutout");
 
 		trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ASH_TRAPDOOR.get()),
 				modLoc("block/ash_trapdoor"), true, "cutout");
@@ -204,50 +235,61 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 		fenceBlock(((FenceBlock) ModBlocks.CALIPO_FENCE.get()), blockTexture(ModBlocks.CALIPO_PLANKS.get()));
 
-		fenceGateBlock(((FenceGateBlock) ModBlocks.CALIPO_FENCE_GATE.get()), blockTexture(ModBlocks.CALIPO_PLANKS.get()));
+		fenceGateBlock(((FenceGateBlock) ModBlocks.CALIPO_FENCE_GATE.get()),
+				blockTexture(ModBlocks.CALIPO_PLANKS.get()));
 
 		doorBlockWithRenderType(((DoorBlock) ModBlocks.CALIPO_DOOR.get()),
-				modLoc("block/calipo_door_bottom"),modLoc("block/calipo_door_top"), "cutout");
+				modLoc("block/calipo_door_bottom"), modLoc("block/calipo_door_top"), "cutout");
 
 		trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.CALIPO_TRAPDOOR.get()),
 				modLoc("block/calipo_trapdoor"), true, "cutout");
 
 		stairsBlock(((StairBlock) ModBlocks.FOSSIL_STAIRS.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
-		slabBlock(((SlabBlock) ModBlocks.FOSSIL_SLAB.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
+		slabBlock(((SlabBlock) ModBlocks.FOSSIL_SLAB.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()),
+				blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
 
 		buttonBlock(((ButtonBlock) ModBlocks.FOSSIL_BUTTON.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
-		pressurePlateBlock(((PressurePlateBlock) ModBlocks.FOSSIL_PRESSURE_PLATE.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
+		pressurePlateBlock(((PressurePlateBlock) ModBlocks.FOSSIL_PRESSURE_PLATE.get()),
+				blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
 
 		fenceBlock(((FenceBlock) ModBlocks.FOSSIL_FENCE.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
-		fenceGateBlock(((FenceGateBlock) ModBlocks.FOSSIL_FENCE_GATE.get()), blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
+		fenceGateBlock(((FenceGateBlock) ModBlocks.FOSSIL_FENCE_GATE.get()),
+				blockTexture(ModBlocks.FOSSIL_BLOCK.get()));
 
-
-		doorBlockWithRenderType(((DoorBlock) ModBlocks.FOSSIL_DOOR.get()), modLoc("block/fossil_door_bottom"), modLoc("block/fossil_door_top"), "cutout");
-		trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.FOSSIL_TRAPDOOR.get()), modLoc("block/fossil_trapdoor"), true, "cutout");
+		doorBlockWithRenderType(((DoorBlock) ModBlocks.FOSSIL_DOOR.get()), modLoc("block/fossil_door_bottom"),
+				modLoc("block/fossil_door_top"), "cutout");
+		trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.FOSSIL_TRAPDOOR.get()), modLoc("block/fossil_trapdoor"),
+				true, "cutout");
 
 		makexansleafCrop((CropBlock) ModBlocks.XANS_LEAVES.get(), "xansleaf_stage", "xansleaf_stage");
 
-///////////////////////////////////////////////////////////////////
-//////////////////////////////METHODS//////////////////////////////
-///////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////
+		////////////////////////////// METHODS//////////////////////////////
+		///////////////////////////////////////////////////////////////////
 	}
 
 	public void makexansleafCrop(CropBlock block, String modelName, String textureName) {
-		Function<BlockState, ConfiguredModel[]> function = state -> xansLeafStates(state, block, modelName, textureName);
+		Function<BlockState, ConfiguredModel[]> function = state -> xansLeafStates(state, block, modelName,
+				textureName);
 
 		getVariantBuilder(block).forAllStates(function);
 	}
+
 	private ConfiguredModel[] xansLeafStates(BlockState state, CropBlock block, String modelName, String textureName) {
 		ConfiguredModel[] models = new ConfiguredModel[1];
-		models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((XansLeavesBlock) block).getAgeProperty()),
-				new ResourceLocation(UndeadRemains.MOD_ID, "block/" + textureName + state.getValue(((XansLeavesBlock) block).getAgeProperty()))).renderType("cutout"));
+		models[0] = new ConfiguredModel(models()
+				.crop(modelName + state.getValue(((XansLeavesBlock) block).getAgeProperty()),
+						new ResourceLocation(UndeadRemains.MOD_ID,
+								"block/" + textureName + state.getValue(((XansLeavesBlock) block).getAgeProperty())))
+				.renderType("cutout"));
 
 		return models;
 	}
 
 	private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
 		simpleBlock(blockRegistryObject.get(),
-				models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+				models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+						blockTexture(blockRegistryObject.get())).renderType("cutout"));
 	}
 
 	public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
@@ -270,7 +312,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
 		simpleBlockWithItem(blockRegistryObject.get(),
-				models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+				models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+						new ResourceLocation("minecraft:block/leaves"),
 						"all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
 	}
 
@@ -282,6 +325,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
 		simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
 	}
+
 	private void glowVineBlock(RegistryObject<Block> blockRegistryObject) {
 		Block block = blockRegistryObject.get();
 		String baseName = ForgeRegistries.BLOCKS.getKey(block).getPath();
@@ -302,6 +346,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
 					.build();
 		});
 	}
-
 
 }
